@@ -39,7 +39,7 @@
 
 # track this file .gitignore (i.e. do NOT ignore it)
 !.gitignore
-
+!webhook.php
 # track .editorconfig file (i.e. do NOT ignore it)
 !.editorconfig
 
