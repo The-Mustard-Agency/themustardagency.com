@@ -1,0 +1,81 @@
+{
+    "logo_url": "http://local.themustardagency.com/wp-content/themes/mustard/images/logo.png",
+    "message" : "Where do you want to start?",
+    "bricks" : [
+        {
+            "label"     :   "Site-Wide",
+            "icon"      :   "fa-sitemap",
+            "links" :   [
+                {
+                    "label" :   "Main Menu",
+                    "url"   :   "nav-menus.php"
+                },
+                {
+                    "label" :   "School Info",
+                    "url"   :   "admin.php?page=theme-general-settings"
+                },
+                {
+                    "label" :   "New logo",
+                    "url"   :   "admin.php?page=theme-general-settings"
+                },
+                {
+                    "label" :   "Upload images or document",
+                    "url"   :   "upload.php"
+                },
+                {
+                    "label" :   "Edit Users",
+                    "url"   :   "users.php"
+                },
+                {
+                    "label" :   "Add New Users",
+                    "url"   :   "user-new.php"
+                }
+            ]
+        },
+        {
+            "label"     :   "Home Page",
+            "icon"      :   "fa-home",
+            "links"     :   [
+                {
+                    "label" :   "Homepage Welcome",
+                    "url"   :   "admin.php?page=theme-home_welcome"
+                }
+            ]
+        },
+        {
+            "label"     :   "Page Control",
+            "icon"      :   "fa-file-o",
+            "links"     :   [
+                {
+                    "label" :   "Manage General Pages",
+                    "url"   :   "admin.php?page=acf-options-homepage#acf-highlights"
+                }
+            ]
+        },
+        {
+            "label"     :   "News & Events Control",
+            "icon"      :   "fa-file-text-o",
+            "links"     :   [
+                {
+                    "label" :   "Manage News Posts",
+                    "url"   :   "edit.php"
+                },
+                {
+                    "label" :   "Manage Events",
+                    "url"   :   "edit.php?post_type=ai1ec"
+                }
+            ]
+        },
+        {
+            "label"     :   "Help, Etc.",
+            "icon"      :   "fa-ambulance",
+            "links"     :   [
+                {
+                    "label" :   "Mustard CMS Manuel",
+                    "url"   :   "http://helpwith.mustardwebsites.com"
+                }
+            ]
+        }
+    ]
+
+}

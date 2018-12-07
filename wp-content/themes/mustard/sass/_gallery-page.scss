@@ -1,0 +1,38 @@
+/******************
+*
+*
+*  Gallery Page
+*
+*
+******************/
+
+.gallery_items_intro {
+
+}
+
+.gallery_items {
+  width: 100%;
+  & ul {
+    width: 100%;
+    margin: 0 auto;
+    columns: $gallery-column-width;
+    & li {
+      object-fit: cover;
+      margin-bottom: 15px;
+      & a{
+        & img {
+          width: 100%;
+          height: $gallery-column-height;
+          object-fit: cover;
+        }
+      }
+      &:hover{
+        & a{
+          & img{
+            opacity: 0.4;
+          }
+        }
+      }
+    }
+  }
+}

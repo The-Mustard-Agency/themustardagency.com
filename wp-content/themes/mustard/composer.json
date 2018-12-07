@@ -1,0 +1,34 @@
+{
+  "name": "upstatement/timber-starter-theme",
+  "description": "Starter theme to build a Timber theme",
+  "type":"wordpress-theme",
+  "minimum-stability" : "stable",
+  "authors": [
+      {
+          "name": "alex woollam",
+          "email": "alex.woollam@themustardagency.com"
+      }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "extra": {
+  	"installer-paths": {
+      "../../plugins/{$name}/": [
+        "wpackagist-plugin/*",
+        "type:wordpress-plugin"
+      ]
+  	}
+	},
+  "require": {
+	  "wpackagist-plugin/timber-library": "0.8",
+    "wpackagist-plugin/timber": "1.*",
+    "wpackagist-plugin/widget-logic": "5.9.*",
+    "wpackagist-plugin/zoneboard": "0.*",
+    "wpackagist-plugin/advanced-forms": "1.3.*",
+    "wpackagist-plugin/quick-bulk-post-page-creator": "1.0.4"
+  }
+}

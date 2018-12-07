@@ -1,0 +1,162 @@
+/******************
+*
+*
+*  FONTS
+*
+*
+******************/
+
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
+@font-face {
+  font-family: 'HighTide';
+  src:  url('fonts/HighTide-Demo.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Bariol Regular';
+  src:  url('fonts/Bariol_Regular.otf') format('opentype');
+}
+
+/**** Styling: ****/
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+li,
+p {
+  font-family: 'Bariol Regular', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+}
+
+.article-body {
+  & ul {
+    list-style: disc;
+    & li {
+      margin-bottom: 30px;
+      color: $color-grey--dark;
+    }
+  }
+  & ol {
+    list-style-type: decimal;
+    list-style-position: outside;
+    padding-left: 10%;
+    & li {
+      margin-bottom: 30px;
+      color: $color-grey--dark;
+    }
+  }
+}
+
+a {
+  font-size: 20px;
+  text-decoration: none;
+  color: $color-navy--dark;
+}
+
+h1 {
+  font-size: 22px;
+  color: $color-green--mid;
+}
+
+h2 {
+  font-size: 20px;
+  color: $color-green--mid;
+}
+
+h3 {
+  font-size: 18px;
+  color: $color-green--mid;
+}
+
+h4 {
+  font-size: 16px;
+  color: $color-green--mid;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+blockquote {
+  font-weight: light;
+  font-style: italic;
+}
+
+.article-h1 {
+  margin-bottom: 32px;
+  font-size: 32px;
+  color: $color-navy--dark;
+}
+
+p {
+  margin-bottom: 32px;
+  font-size: 19px;
+  color: $color-navy--dark;
+}
+
+.news_items {
+  & .item{
+    & a{
+      & h4{
+        color: $color-green--mid;
+      }
+    }
+    &:hover {
+      & a{
+        h4 {
+          color: $color-navy--light;
+        }
+      }
+    }
+  }
+}
+
+.right_header_bottom {
+  & p {
+   color: $color-grey--light;
+   font-size: 16px;
+ }
+}
+
+.left_header_bottom {
+  & p {
+    color: $color-grey--light;
+    font-size: 16px;
+  }
+}
+
+.article-body {
+  & p {
+    color: $color-grey--dark;
+    line-height: 1.4;
+    font-size: 16px;
+  }
+}
+
+.cta-focus{
+	color: $color-yellow--mid;
+	font-family: "HighTide";
+	text-transform: capitalize;
+	font-size: 130px;
+	line-height: 0.4;
+	margin-right: 33px;
+}
+
+.blue{
+	color: $color-blue--dark;
+}

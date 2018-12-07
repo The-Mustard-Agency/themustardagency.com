@@ -1,0 +1,10 @@
+<div id="header_quicklinks_wrap" class="header_quicklinks_wrap shadow">
+	<div class="header_quicklinks_contain">
+		<button lable="close_quicklinks" class="close_quicklinks" onclick="fire_quicklinks()"><div class="icon"><i class="fa fa-times" aria-hidden="true"></i></div></button>
+		<ul class="quicklinks-ul">
+			{% for item in quicklinksmenu %}
+				<li class="quicklinks-li"><a href="{{ item.link }}">{{ item.title }}</a></li>
+			{% endfor %}	
+		</ul>
+	</div>
+</div>

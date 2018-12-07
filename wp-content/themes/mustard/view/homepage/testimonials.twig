@@ -1,0 +1,15 @@
+<div class="testimonials">
+	<div class="testimonials_inner">
+		<div class="testimonials_inner_left">
+			<span class="cta-focus blue">Testimonials</span>
+		</div>
+		<div class="testimonials_inner_right">
+			{% for testimonial in options.testimonials %}
+					{{ testimonial.testimonail_text }}
+				<p class="author">
+					{{ testimonial.testimonial_author }}
+				</p>
+			{% endfor %}
+		</div>
+	</div>
+</div>

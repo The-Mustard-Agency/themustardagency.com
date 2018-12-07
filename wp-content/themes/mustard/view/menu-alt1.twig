@@ -1,0 +1,25 @@
+{% if menu %}
+	<ul class="menu">
+	{% for item in menu %}
+		
+		
+		<li class="{{ item.classes | join(' ') }}">
+			<a target="{{ item.target }}" href="{{ item.link }}" >{{ item.title }}</a>
+			
+		    <ul id="sub-menu" class="dropdown-content sub-menu">
+			    {% for child in item.children %}
+			    	<li class="nav-drop-item">
+						<a href="{{ child.link }}">{{ child.title }}</a>
+					</li>
+				{% endfor %}
+			</ul>
+			
+		</li>
+		<div class="nav_menu_spacers"></div>
+		
+	{% endfor %}
+	
+	</ul>
+{% endif %}
+
+

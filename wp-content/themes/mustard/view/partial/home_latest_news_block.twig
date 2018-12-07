@@ -1,0 +1,25 @@
+<div class="news_events_home_block">
+<h1>Latest News</h1>
+<div class="view_all"><a>view all news</a></div>
+
+	{% for post in home_news %}
+		<div class="home_news_single">
+    	<a href="{{ post.get_permalink }}">
+
+	    	{% if post.thumbnail.src %}
+	    	<div class="homenewsimg" style="background-image:url({{ post.thumbnail.src }});">
+		    	<div class="news_date_container"><p class="home_news_date">{{ post.post_date|date('jS M Y') }}</p></div>
+	    	</div>
+	    	{% else %}
+	    	<div class="homenewsimg_blank" style="">
+		    	<div class="news_date_container"><p class="home_news_date">{{ post.post_date|date('jS M Y') }}</p></div>
+	    	</div>
+	    	{% endif %}
+
+			<h2>{{ post.post_title|excerpt(20) }}</h2>
+
+    	</a>
+    	</div>
+	{% endfor %}
+
+</div>

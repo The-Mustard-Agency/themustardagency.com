@@ -1,0 +1,312 @@
+/******************
+*
+*
+*  GLOBAL VARIABLES LIKE COLOURS ETC...
+*  When changing colour names,
+*  Be sure to find and replace all the old colour names.
+*
+*
+******************/
+
+
+/* ==== Colour settings ====*/
+
+/* Please use proper naming conventions for future fonts and colour variables, e.g.
+
+	$color-red-dark
+	$color-red-mid #never use just 'red'. 3 exceptions being. $color-white, $color-black, $color-transparent
+	$color-red-light
+	$color-red-light--alt # if you have a secondary light red, i know this can be confusing, work with it, see what happens.
+	$color-brand
+	$color-brand--accent
+	$color-background
+	$color-background--alt
+
+Same for fonts:
+
+	$font-base #Always prefix with 'font'
+	$font-body
+	$font-feature
+
+if in doubt, theres a pretty good ref guide here:
+http://domain7.github.io/dev-wiki/css/
+*/
+
+$color-blue--grey:#5E727E; //Grey/Blue.
+$color-blue--light:#07789B; //Mustard Light Blue.
+$color-blue--mid:#1B3E54; //Mustard Blue.
+$color-blue--dark:#1b3647; //Dark Blue.
+$color-pink--mid:#E10586; //Pink.
+$color-pink--dark:#3B234A; //Purple.
+$color-yellow--mid:#E0A812; //Yellow dark.
+$color-yellow--dark:#E0A812; //Yellow.
+$color-white:#EEEBEF; //Mustard White.
+$color-grey--mid:#5E727E; //Grey.
+$color-grey--light:#A2AEB6; //Light Grey.
+
+
+$color-blue--lighter:#e8f6ff;
+$color-navy--light:#2475bc;
+$color-navy--dark:#16558d;
+$color-green--light:#82d255;
+$color-green--mid:#6cc03d;
+$color-green--dark:#4ca917;
+$color-grey--dark:#565656;
+
+$color-transparent:rgba(255,255,255,0);
+
+// Standardised colours:
+
+$color-primary:$color-navy--light;
+$color-primary--light: $color-blue--light;
+$color-alt: $color-green--mid;
+
+
+/* Breakpoints:
+* to use:
+*.some-module {
+*   padding: 10px;
+*   @media (min-width: breakpoint(large)) { ...
+*/
+$breakpoints: (
+  xxlarge: 1600px,
+  xlarge: 1400px,
+  large: 1200px,
+  medium: 1000px,
+  small : 800px,
+  xsmall: 600px,
+  xxsmall: 400px
+);
+
+/* ============ General Settings ============ */
+
+$main-background-color: $color-blue--lighter;
+$main-page-background-color: $color-blue--lighter;
+
+/* ------------ base widths ----------- */
+
+// Depreciated!!!! PHASE OUT!! use breakpoints up top -^
+$site-width: 1400px;
+/* ^- this is the main, full size width (after wrap),
+		use mixins for the responsive settings in each element, e.g.
+		`@include tablets{
+				width:90%;
+		}` phones | tablets | lowresmonitors
+*/
+
+/* ------------ Site Header ------------ */
+
+$header-bg-colour: $color-blue--mid;
+$logo_position:center;
+$logo: 'images/logo.png';
+
+
+/* ------------ Nav Bar ------------ */
+
+$nav_bar_height: 70px;
+
+$nav-bg-colour: $color-navy--light; /* can be adjusted for outside colours - check _header.scss*/
+$nav-bg-colour-hover: $color-navy--dark;
+$nav-text-colour: $color-blue--lighter;
+$nav-font-size: 20px;
+
+$nav-bar-item-spacer-char: '';
+$nav-bar-item-spacer-color: #ebdf58;
+
+/* dropdwons stuff */
+
+$dropdown-width: 220px!important;
+
+
+/* ------------ Sidebar ------------ */
+
+/* set sidebar height HACKY HACKY HACKY! fix somepoint*/
+
+$sidebar-height: 100px;
+$sidebar_item_height: 64px;
+
+/*
+	Sidebar, left or right
+							*/
+
+$sidebar-side: left;
+$sidebar-width: 25%;
+
+/*
+	Sidebar, menu header settings
+							*/
+
+$sidebar-title-size: 28px;
+$sidebar-title-align: center;
+$sidebar-title-color: $red;
+$sidebar-title-bg: white;
+
+/*
+	Sidebar, menu item settings
+							*/
+
+$sidebar-text-align: left;
+$sidebar-bg: $color-blue--light;
+$sidebar-bg-hover: $color-navy--light;
+$sidebar-text: $color-grey--light;
+$sidebar-text-hover: $color-blue--lighter;
+
+/* ------------
+
+
+
+	General Page
+
+
+
+
+
+	------------ */
+
+/*
+	page header image
+							*/
+
+$page-header-height: 166px;
+
+
+/* ------------- quicklinks -----------------*/
+
+
+ $quicklinks-height: 170px; /* 90 for button 190px for photo seems to work well?  */
+ $quicklinks-button-height:90px;
+ $quicklinks-bg-color: $color-green--dark;
+ $quicklinks-container-bg-color: $color-green--dark;
+
+ $quicklinks-inner-calc: calc(#{$quicklinks-height} - #{$quicklinks-button-height};); //(dont edit this)
+
+
+/* ------------ Footer and Pre-footer ------------ */
+
+
+/*
+	pre footer
+							*/
+
+
+$pre-footer-height: 150px;
+$pre-footer-bg-color: $color-blue--lighter;
+
+/*
+	 footer
+							*/
+
+$footer-nav_width-adjust: 300px;
+$footer-height: 40px;
+$footer-bg-color: $color-blue--lighter;
+
+/* ------------
+
+
+
+
+	Home Page Page
+
+
+
+
+
+	------------ */
+
+/*
+	Header Slider?
+							*/
+
+$home_slider_height: 650px;;
+
+/*
+	News and events section
+							*/
+
+$news-and-events-height:  400px;
+
+$news-and-events-bg-colour: $color-blue--light; /*main bg for both*/
+
+$news-bg-colour: $color-blue--light;
+$events-bg-colour: $color-blue--lighter;
+
+$which_side_for_events: right; //left or right.. duh.
+
+$font-size-for-viewall: 18px;
+
+$alternate-news-itmes-colours: y; //(y)es or (n)o
+$latest-news-item-bg-colour: rgba(225,225,225,0.5);
+$latest-news-item-bg-colour-alt: rgba(225,225,225,0.2);
+$latest-news-item-bg-colour_hover: rgba(225,225,225,0.2);
+$latest-news-item-bg-colour-alt_hover: rgba(225,225,225,0.5);
+
+$home_news_date_colour: $color-white;
+$home_news_date_align: center;
+$home_news_date_font_size: 18px;
+
+$home_news_title_colour: $color-grey--dark;
+$home_news_title_align: center;
+$home_news_title_font_size: 28px;
+
+$home_news_content_colour: $red;
+$home_news_content_align: center;
+$home_news_content_font_size: 15px;
+
+$home_news_read_colour: $red;
+$home_news_read_align: right;
+$home_news_read_font_size: 20px;
+
+
+
+/* ------------
+
+
+
+
+	Latest News Page
+
+
+
+
+
+	------------ */
+
+/*
+	Display Date?
+							*/
+
+$display-news-date: y; //(y)es or (n)o
+
+
+
+/* ------------
+
+
+
+
+	Gallery Page
+
+
+
+
+
+
+	------------ */
+
+
+
+/*
+	number in column?
+							*/
+
+$gallery-column-width: 3;
+
+/* image height?
+
+	3 colums best at 160px;
+	2 columns best at 190px;
+	will automate!!!
+
+	 */
+
+$gallery-column-height: 160px;

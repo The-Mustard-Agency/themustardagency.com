@@ -1,0 +1,4 @@
+<h3>Related Stories</h3>
+{% for post in related %}
+    <h4><a href="{{ post.get_path }}">{{ post.post_title }}</a></h4>
+{% endfor %}

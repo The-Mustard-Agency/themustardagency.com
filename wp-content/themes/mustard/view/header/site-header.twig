@@ -1,0 +1,32 @@
+<header class="header" id="main_header">
+  {% block header %}
+    <div class="wrapper" id="headerwrapper">
+      <div class="header_wrapper">
+        <div class="header_inner">
+          <div class="left_header">
+            <div class="logo"></div>
+          </div>
+          <div class="right_header">
+            <div class="right_header_top">
+							<p>
+								email: {{ options.school_email }}
+							</p>
+							<p>
+								call: {{ options.school_phone }}
+							</p>
+							<div class="soc facebook"></div>
+							<div class="soc twitter"></div>
+							<div class="soc instagrame"></div>
+							<div class="soc search"></div>
+            </div>
+            <div class="right_header_bottom">
+							<nav id="nav-main" class="nav-main" role="navigation">
+				          {% include "header/menu.twig" with { 'menu' : menu.get_items } %}
+				      </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+</header>

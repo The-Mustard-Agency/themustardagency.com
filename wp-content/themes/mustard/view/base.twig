@@ -1,0 +1,69 @@
+{% block html_head_container %}
+
+{% include 'html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+	</head>
+{% endblock %}
+
+	<body class="{{ body_class }}" data-template="base.twig">
+		{% include '/header/site-header.twig' %}
+		<section id="content" role="main" class="content-wrapper">
+			{% if fn('is_front_page') %}
+			{% include "/homepage/home_page_slider.twig" %}
+				{% include '/partial/quicklinks.twig' %}
+				{% include "/homepage/cta1.twig" %}
+			{% endif %}
+			{% if fn('is_front_page') %}
+			{% else %}
+				{% if title %}<h1>{{ title }}</h1>{% endif %}
+				<div class="wrapper {{ sidebar_class }} main_page_wrap">
+					{% block content %}
+						Sorry, no content
+					{% endblock %}
+			{% endif %}
+					{% if fn('is_front_page') %}
+							{% include "/homepage/findoutmore.twig" %}
+							{% include "/homepage/tile.twig" %}
+							{% include "/homepage/cta2.twig" %}
+							{% include "/homepage/findoutmore2.twig" %}
+							{% include "/homepage/testimonials.twig" %}
+					{% endif %}
+				</div>
+			{% if fn('is_front_page') %}
+			{% else %}
+				{% if sidebar %}
+					<aside class="layout-sidebar">
+						{{ sidebar }}
+					</aside>
+				{% endif %}
+			{% endif %}
+		</section>
+
+		{% if fn('is_front_page') %}
+		{% else %}
+			{% include "/partial/global_cta.twig" %}
+			{% include "/homepage/tile.twig" %}
+		{% endif %}
+		{% block footer %}
+			<footer id="footer">
+				<div class="pre-footer">
+					<div class="pre-footer-contain">
+						{% include '/footer/pre-footer.twig' %}
+					</div>
+				</div>
+				<div class="footer">
+					<div class="footer-contain">
+						{% include '/footer/footer.twig' %}
+					</div>
+				</div>
+			</footer>
+			{{ function('wp_footer') }}
+		{% endblock %}
+		{% block alerts %}
+				{% if options.turn_on_alerts == 'true'  %}
+					{% include '/partial/alert.twig' %}
+				{% endif %}
+		{% endblock %}
+	</body>
+</html>

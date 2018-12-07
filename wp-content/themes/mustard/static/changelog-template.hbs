@@ -1,0 +1,14 @@
+{{#each releases}}
+
+  Last commit date: {{niceDate}}
+
+  {{#each merges}}
+    - MERGE: {{message}} | [`{{id}}`]({{href}})
+  {{/each}}
+  {{#each fixes}}
+    - FIX: {{commit.subject}} | {{commit}} | [`{{id}}`]({{href}})
+  {{/each}}
+  {{#each commits}}
+    - COMMIT: {{subject}} | [`{{shorthash}}`]({{href}})
+  {{/each}}
+{{/each}}

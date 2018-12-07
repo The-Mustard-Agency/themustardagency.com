@@ -1,0 +1,83 @@
+{
+    "key": "group_5c0a7d59e2384",
+    "title": "Testimonials",
+    "fields": [
+        {
+            "key": "field_5c0a7d6469113",
+            "label": "testimonials",
+            "name": "testimonials",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 1,
+            "max": 0,
+            "layout": "block",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5c0a7d7069114",
+                    "label": "testimonial author",
+                    "name": "testimonial_author",
+                    "type": "text",
+                    "instructions": "Author of testimonial.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "author",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c0a7d8569115",
+                    "label": "testimonail text",
+                    "name": "testimonail_text",
+                    "type": "wysiwyg",
+                    "instructions": "Please use \"quotes\", if you want them that is..",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "testimonial",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "text",
+                    "toolbar": "full",
+                    "media_upload": 0,
+                    "delay": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-testimonial-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1544192677
+}

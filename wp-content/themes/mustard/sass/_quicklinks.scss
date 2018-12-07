@@ -1,0 +1,174 @@
+/******************
+*
+*
+*  Footer quicklinks
+*
+*
+******************/
+
+.quicklinks_container {
+  height: $quicklinks-height;
+  width: 100%;
+  background-color: $color-blue--mid;
+}
+
+.quicklinks_inner {
+  width: 100%;
+  margin: 0 auto;
+  height: 320px;
+  background-color: $color-blue--mid;
+	.quicklink_single:nth-child(even){
+		background-color: $color-blue--dark;
+	}
+	& .quicklink_single{
+		height: 320px;
+		float: left;
+		cursor: pointer;
+	  & .quicklink_item {
+	    height: 251.5px;
+	    background-size: cover;
+	    opacity: 1;
+			transition: height 2s;
+	    &:hover {
+	      opacity: 1;
+	    }
+	  }
+		& .quicklink_title{
+			width: 100%;
+			height: 67.19px;
+			transition: height 2s;
+			& a{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100%;
+				font-size: 24px;
+			}
+		}
+	  & .quicklink_item-button {
+	    height: 100%;
+	    float: left;
+	    background-color: $color-blue--mid;
+	    background-size: cover;
+	    height: $quicklinks-button-height;
+	    text-align: center;
+	    margin-top: 25px;
+	    border-style: solid;
+	    border-width: 2px;
+	    border-radius: 10px;
+	    border-color: $color-blue--mid;
+	    margin: 0 10px;
+
+	    & a {
+	      color: $color-green--light;
+	    }
+	  }
+		& a{
+			text-align: center;
+			text-transform: uppercase;
+			color: $color-white;
+		}
+
+		&:nth-child(1){
+			border-bottom: 0px;
+			transition: border-bottom 1s;
+			&:hover{
+			border-bottom: 9px solid $color-pink--mid;
+			}
+		}
+		&:nth-child(2){
+			border-bottom: 0px;
+			transition: border-bottom 1s;
+			&:hover{
+			border-bottom: 9px solid $color-yellow--mid;
+			}
+		}
+		&:nth-child(3){
+			border-bottom: 0px;
+			transition: border-bottom 1s;
+			&:hover{
+			border-bottom: 9px solid $color-blue--light;
+			}
+		}
+		&:nth-child(4){
+			border-bottom: 0px;
+			transition: border-bottom 1s;
+			&:hover{
+			border-bottom: 9px solid $color-blue--grey;
+			}
+		}
+		&:nth-child(5){
+			border-bottom: 0px;
+			transition: border-bottom 1s;
+			&:hover{
+			border-bottom: 9px solid $color-yellow--mid;
+			}
+		}
+
+		&:hover{ //HOVER FOR QUICKLINKS..........
+			& .quicklink_item {
+		    height: 0px;
+			}
+			& .quicklink_title{
+				height: 320px;
+			}
+		}
+	}
+}
+
+.quicklink_item-button_a {
+  color: white;
+  &:hover{
+    & .quicklink_item-button {
+      background-color: $color-navy--light;
+      border-color: $color-navy--dark;
+      opacity: 0.75;
+      & .quicklink_button_left {
+        background-color: $color-navy--dark;
+      }
+    }
+  &:active{
+    & .quicklink_item-button {
+      opacity: 1;
+      border-width: 4px;
+    }
+  }
+  }
+}
+
+.quicklink_button {
+  text-align: left;
+  position: relative;
+  & p {
+    margin-top: 20px;
+    text-align: left;
+    font-size: 16px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 20px;
+  }
+  & .fa {
+    color: white;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+.quicklink_button_left {
+  width: 30%;
+  float: left;
+  display: inline;
+  background-color: $color-green--dark;
+  border-radius: 100%;
+  height: 80%;
+  padding: 10px;
+  margin: 4%;
+}
+
+.quicklink_button_right {
+  width: 60%;
+  float: right;
+  display: inline;
+}

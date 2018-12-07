@@ -1,0 +1,29 @@
+/******************
+*
+*
+*  News page
+*
+*
+******************/
+
+.latest_news_single {
+  margin: 30px 0;
+  background-color: $color-blue--light;
+  padding: 20px;
+  border-radius: 20px;
+  &:hover {
+    background-color: $color-green--light;
+  }
+  & a {
+    & h2 {
+      font-size: 25px;
+      color: $color-navy--dark;
+    }
+  }
+}
+
+.news_date {
+  font-size: 15px;
+  margin: 10px 0;
+  color: $color-navy--dark!important;
+}

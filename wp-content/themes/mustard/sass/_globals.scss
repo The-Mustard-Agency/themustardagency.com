@@ -1,0 +1,136 @@
+/******************
+*
+*
+*  Global Styling - liek page containers etc.
+*
+*
+******************/
+
+html {
+  font-size: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: $color-white;
+}
+
+#content {
+  height: auto;
+}
+
+.content-wrapper {
+  height: auto;
+  min-height: 50vh;
+}
+
+.main_page_wrap {
+  overflow: hidden;
+}
+
+.article-content::after {
+  content: "";
+  height: 90px;
+}
+
+article {
+  background-color: $color-white;
+  min-height: 50vh;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* =======================================================================
+## ++ Cleafix
+========================================================================== */
+/* float clearing for IE6 */
+
+* html .clearfix {
+  height: 1%;
+  overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix {
+  min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+  font-size: 0;
+}
+
+.clr {
+  clear: both;
+}
+
+.page_heading_container {
+  position: relative;
+  width: 100%;
+}
+
+.page_heading_image {
+  width: 96%;
+  margin: 30px;
+  height: $page-header-height;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+//content header images//
+
+.page_heading_image {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.page_heading_image_over {
+  background-image: url(./images/blue_bird.svg), url("./images/content_clouds.svg");
+  background-repeat: no-repeat;
+  background-position: 18% 10%, -18% -35%;
+  background-size: 66px, 250px;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+#content {
+  //width: $site-width;
+  //margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.article-content {
+  padding: 30px 0 30px 30px;
+}
+
+.post-wrapper {
+  margin: 30px;
+}
+
+.global_cta{
+	width: 100%;
+	height: 177px;
+	background-color: $color-pink--mid;
+	&_inner{
+		width: $site-width;
+		margin: 0 auto;
+		& h2{
+			font-sizE: 35px;
+			color: $color-white;
+			text-transform: uppercase;
+		}
+	}
+}

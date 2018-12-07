@@ -1,0 +1,58 @@
+<header class="header" id="main_header">
+  {% block header %}
+    <div class="wrapper" id="headerwrapper">
+      {% if option.header_quicklinks == yes %}
+        {% include "partial/header_quicklinks.twig" with {
+          'quicklinksmenu' : quicklinksmenu.get_items
+        } %}
+      {% elseif options.header_quicklinks == no %}
+        <p>quicklinks null</p>
+      {% endif %}
+      <div class="header_wrapper">
+        <div class="header_inner">
+          <div class="left_header">
+            <div class="left_header_top">
+              {% if option.header_quicklinks == yes %}
+                <button lable="quicklinks" onclick="fire_quicklinks()">quicklinks
+                  <div class="icon">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </div>
+                </button>
+              {% elseif options.header_quicklinks == no %}
+                <p>quicklinks null</p>
+              {% endif %}
+            </div>
+            <div class="left_header_bottom">
+              <p>
+                {{ options.school_address }}</p>
+            </div>
+          </div>
+          <div class="logo"></div>
+          <div class="right_header">
+            <div class="right_header_top">
+              <button lable="quicklinks">Search<div class="icon">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+              </button>
+            </div>
+            <div class="right_header_bottom">
+              <p>
+                {{ options.school_phone }}
+                {{ options.school_email }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav id="nav-main" class="nav-main" role="navigation">
+        {% if options.menu_style == 'menu' %}
+          {% include "menu.twig" with {
+            'menu' : menu.get_items
+          } %}
+        {% elseif options.menu_style == 'alt1' %}
+          {% include "menu-alt1.twig" with {'menu': menu.get_items} %}
+        {% endif %}
+      </nav>
+      <!-- #nav -->
+    </div>
+  {% endblock %}
+</header>

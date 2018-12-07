@@ -1,0 +1,9 @@
+<h1>Upcoming Events</h1>
+<div class="view_all"><a>view all events</a></div>
+	{% for post in home_event %}
+		<div class="home_news_single">
+			<img src="{{ post.thumbnail.src }}" alt="&#xf073;" class="event_image">
+			<h2>{{ post.post_title|excerpt(20) }}</h2>
+			<p class="event_date">{{ post.event_date|date('F j, Y') }}</p>
+    	</div>
+	{% endfor %}

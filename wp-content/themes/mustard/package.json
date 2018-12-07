@@ -1,0 +1,31 @@
+{
+  "name": "mustard3-gulp",
+  "version": "1.0.0",
+  "description": "Gulp dependencies for mustard3 WordPress theme",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivandoric/mustard3.git"
+  },
+  "author": "Alex Woollam",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-phpcbf": "^0.1.2",
+    "gulp-phpcs": "^2.2.0",
+    "gulp-phpunit": "^0.26.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-shell": "^0.6.5",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "gutil": "^1.6.4",
+    "imagemin-pngquant": "^4.2.0",
+		"cypress": "3.1.0"
+  }
+}

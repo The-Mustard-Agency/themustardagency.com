@@ -1,0 +1,338 @@
+{
+    "key": "group_5c0a2d71c2b21",
+    "title": "Tiles",
+    "fields": [
+        {
+            "key": "field_5c0aa2a67ef85",
+            "label": "Row 1",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c0a2d810118e",
+            "label": "tiles",
+            "name": "tiles",
+            "type": "repeater",
+            "instructions": "Tiles for homepage.\r\nMax 5 for each row, will probably break with less than 5 images.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 5,
+            "max": 5,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5c0a2db101190",
+                    "label": "Default state",
+                    "name": "default_state",
+                    "type": "true_false",
+                    "instructions": "Start as Image or Text?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Image",
+                    "ui_off_text": "Test"
+                },
+                {
+                    "key": "field_5c0a2d9a0118f",
+                    "label": "Tile image",
+                    "name": "tile_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5c0a2def01191",
+                    "label": "Background color",
+                    "name": "background_color",
+                    "type": "text",
+                    "instructions": "Use the average relative colour, to get this value in photoshop - Filters > Blur > Average.\r\nPaste Hexcode here ( # not required! ). **This will stop the lazy load looking jank.x**",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c0a2e6c01192",
+                    "label": "Tile text.",
+                    "name": "tile_text",
+                    "type": "textarea",
+                    "instructions": "Formatting will probably be overwritten, you can use <b>bold<\/b> etc..\r\nBare in mind this isnt much space! - Leave blank for no text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5c0a2ec901193",
+                    "label": "Hover type.",
+                    "name": "hover_type",
+                    "type": "radio",
+                    "instructions": "the hover type...",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "_flip": "Flip",
+                        "_fade": "Fade"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5c0a38564966a",
+                    "label": "tile back colour",
+                    "name": "tile_back_colour",
+                    "type": "color_picker",
+                    "instructions": "This is the colour for the back of the tile. (again, dont use the # )",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5c0aa2b57ef86",
+            "label": "Row 2",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_5c0aa2937ef7e",
+            "label": "tiles row 2",
+            "name": "tiles_two",
+            "type": "repeater",
+            "instructions": "Tiles for homepage.\r\nMax 5 for each row, will probably break with less than 5 images.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 5,
+            "max": 5,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_5c0aa2937ef7f",
+                    "label": "Default state",
+                    "name": "default_state",
+                    "type": "true_false",
+                    "instructions": "Start as Image or Text?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "ui": 1,
+                    "ui_on_text": "Image",
+                    "ui_off_text": "Test"
+                },
+                {
+                    "key": "field_5c0aa2937ef80",
+                    "label": "Tile image",
+                    "name": "tile_image",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5c0aa2937ef81",
+                    "label": "Background color",
+                    "name": "background_color",
+                    "type": "text",
+                    "instructions": "Use the average relative colour, to get this value in photoshop - Filters > Blur > Average.\r\nPaste Hexcode here ( # not required! ). **This will stop the lazy load looking jank.x**",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5c0aa2937ef82",
+                    "label": "Tile text.",
+                    "name": "tile_text",
+                    "type": "textarea",
+                    "instructions": "Formatting will probably be overwritten, you can use <b>bold<\/b> etc..\r\nBare in mind this isnt much space! - Leave blank for no text.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": "",
+                    "new_lines": ""
+                },
+                {
+                    "key": "field_5c0aa2937ef83",
+                    "label": "Hover type.",
+                    "name": "hover_type",
+                    "type": "radio",
+                    "instructions": "the hover type...",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "_flip": "Flip",
+                        "_fade": "Fade"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "save_other_choice": 0,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_5c0aa2937ef84",
+                    "label": "tile back colour",
+                    "name": "tile_back_colour",
+                    "type": "color_picker",
+                    "instructions": "This is the colour for the back of the tile. (again, dont use the # )",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-tiles-settings"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1544200912
+}

@@ -1,0 +1,14 @@
+		{% if fn('is_front_page') %}
+			{% if options.popup_on == 'true'  %}
+				{% if options.pop_dates_bol == 'true' %}		
+					{% if options.pop_start_date <= "now"|date("d/m/Y") and options.pop_end_date >= "now"|date("d/m/Y") %}
+						{% include "popup.twig" %}
+					{% else %}
+					{% endif %}	
+				{% else %}
+					{% include "popup.twig" %}
+				{% endif %}			
+			{% endif %}
+		{% endif %}
+		
+		

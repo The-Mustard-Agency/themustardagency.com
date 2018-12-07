@@ -1,0 +1,10 @@
+<div class="quicklinks_inner">
+	{% for item in options.quicklinks %}
+	<a class="quicklink_item-button_a" href="{{ item.quicklink_uri }}">
+        <div class="quicklink_item-button" style="width:calc({{ options.number_of_quicklinks }} - 20px)">
+            <div class="quicklink_button quicklink_button_left"><i class="fa {{ item.quicklink_icon }}" aria-hidden="true"></i></div>
+            <div class="quicklink_button quicklink_button_right"><p>{{ item.quiclink_title }}</p></div>
+        </div>
+    </a>
+    {% endfor %}
+</div>

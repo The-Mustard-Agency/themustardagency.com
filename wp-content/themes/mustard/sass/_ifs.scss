@@ -1,0 +1,116 @@
+/******************
+*
+*
+*  General 'if' modifiers;
+*
+*
+******************/
+
+
+/*
+Set and forget:
+*/
+
+//Sidebar:
+$sidebar_has_title: n;
+$sidebar_bold_on_hover: n;
+$sidebar-side: right;
+//News page:
+$display-news-date: n;
+
+//Homepage
+$alternate-news-itmes-colours: n;
+
+/*
+If sidebar has menu title, fire that here: set in variables.
+*/
+
+@if $sidebar_has_title == y {
+  .side-title {
+    display: block;
+  }
+} @else
+if $sidebar_has_title == n {
+  .side-title {
+    display: none;
+  }
+} @else {
+  .side-title {
+    display: none;
+  }
+}
+
+/*
+If sidebar menu items bold on hover, then triger here. if set in variables.
+*/
+
+@if $sidebar_bold_on_hover == y {
+  .menu li:hover a {
+    font-weight: 700;
+  }
+} @else {}
+
+/*
+Set which side to put the menu.
+*/
+
+.content-wrapper {
+  @if $sidebar-side == right {
+    margin-left: 0;
+    margin-right: 0;
+  } @else {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/*
+Set the news date to hidden if needed
+*/
+
+.news_date {
+  @if $display-news-date == y {
+    display: block;
+  } @else
+  if $display-news-date == n {
+    display: none;
+  }
+}
+
+/*
+Set alternate news item colours
+*/
+
+@if $alternate-news-itmes-colours == "y" {
+  .home_news > .home_news_single:nth-child(even) {
+    background-color: $latest-news-item-bg-colour;
+  }
+
+  .home_news > .home_news_single:nth-child(odd) {
+    background-color: $latest-news-item-bg-colour-alt;
+  }
+
+  .home_news > .home_news_single:hover:nth-child(even) {
+    background-color: $latest-news-item-bg-colour_hover;
+  }
+
+  .home_news > .home_news_single:hover:nth-child(odd) {
+    background-color: $latest-news-item-bg-colour-alt_hover;
+  }
+} @else {
+  .home_news > .home_news_single:nth-child(even) {
+    background-color: $latest-news-item-bg-colour;
+  }
+
+  .home_news > .home_news_single:nth-child(odd) {
+    background-color: $latest-news-item-bg-colour;
+  }
+
+  .home_news > .home_news_single:hover:nth-child(even) {
+    background-color: $latest-news-item-bg-colour_hover;
+  }
+
+  .home_news > .home_news_single:hover:nth-child(odd) {
+    background-color: $latest-news-item-bg-colour_hover;
+  }
+}

@@ -1,0 +1,59 @@
+/* CSS Document */
+/*!
+Theme Name: The Mustard Agency
+Description:
+Version: 0.1a
+Author: Alex Woollam
+Author URI: http://www.themustardagency.com/
+Tags: starter theme, light, sass, gulp, livereload
+
+
+
+  /$$$$$$  /$$$$$$$$ /$$$$$$  /$$$$$$$  /$$
+ /$$__  $$|__  $$__//$$__  $$| $$__  $$| $$
+| $$  \__/   | $$  | $$  \ $$| $$  \ $$| $$
+|  $$$$$$    | $$  | $$  | $$| $$$$$$$/| $$
+ \____  $$   | $$  | $$  | $$| $$____/ |__/
+ /$$  \ $$   | $$  | $$  | $$| $$
+|  $$$$$$/   | $$  |  $$$$$$/| $$       /$$
+ \______/    |__/   \______/ |__/      |__/
+
+
+
+<<<< DO NOT EDIT LIVE! THIS IS A SASS BASED STYLESHEET! >>>>
+
+
+
+
+*/
+
+/* Vendor */
+@import "susy";
+@import "su";
+@import "bulma";
+
+
+/* Setup */
+@import "reset";
+@import "mixins";
+@import "variables";
+@import "ifs";
+@import "fonts";
+@import "globals";
+
+
+/* WP parts */
+@import "popup";
+@import "header";
+@import "home_page_slider";
+@import "menu";
+@import "buttons";
+@import "homepage";
+@import "sidebar";
+@import "news-page";
+@import "docs-page";
+@import "contact-page";
+@import "gallery-page";
+@import "quicklinks";
+@import "alerts";
+@import "footer";
