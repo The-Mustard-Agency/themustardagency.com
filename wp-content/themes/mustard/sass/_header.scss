@@ -116,6 +116,7 @@
 	}
 	& .right_header_top {
 		padding-left: 172px;
+		float: right;
 		@include media('xxsmall'){
 			padding-left: 0px;
 			display: none;

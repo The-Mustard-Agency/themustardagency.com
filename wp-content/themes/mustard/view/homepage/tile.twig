@@ -1,31 +1,18 @@
 <div class="tiles">
 	<div class="tiles_inner">
-
 		<div class="tiles_inner_row">
+
 			{% for tile in options.tiles %}
 				<div class="tiles_inner_row_tile">
-					<div class="tile inner_shadow tile_hov{{ tile.hover_type }}" data-bkcolor="{{ tile.tile_back_colour }}" data-desc="{{ tile.tile_text }}" style="background-color: #{{ tile.background_color }}" data-bg="{{ tile.tile_image }}"></div>
+					<div class="tile inner_shadow" alt="{{ tile.alt_text }}" data-bkcolor="{{ tile.tile_back_colour }}" data-desc="{{ tile.tile_text }}" style="background-color: #{{ tile.background_color }}" data-bg="{{ tile.tile_image }}">
+						<figcaption>
+							<p>
+								{{ tile.tile_text }}
+							</p>
+						</figcaption>
+					</div>
 				</div>
 			{% endfor %}
 		</div>
-
-		<div class="tiles_inner_row">
-			<div class="tiles_inner_row_tile">
-				<div class="tile inner_shadow tile_hov_flip" data-desc="this is some content" data-bg="{{ site.theme.link }}/images/highres/tile5.png"></div>
-			</div>
-			<div class="tiles_inner_row_tile">
-				<div class="tile inner_shadow tile_hov_flip" data-desc="this is some other content" data-bg="{{ site.theme.link }}/images/highres/tile4.png"></div>
-			</div>
-			<div class="tiles_inner_row_tile">
-				<div class="tile inner_shadow tile_hov_flip" data-desc="more content" data-bg="{{ site.theme.link }}/images/highres/tile3.png"></div>
-			</div>
-			<div class="tiles_inner_row_tile">
-				<div class="tile inner_shadow tile_hov_flip" data-desc="this is more content" data-bg="{{ site.theme.link }}/images/highres/tile2.png"></div>
-			</div>
-			<div class="tiles_inner_row_tile">
-				<div class="tile inner_shadow tile_hov_flip" data-desc="this is also some more content" data-bg="{{ site.theme.link }}/images/highres/tile1.png"></div>
-			</div>
-		</div>
-
 	</div>
 </div>
