@@ -3939,6 +3939,21 @@ article { background-color: #EEEBEF; min-height: 50vh; height: auto; }
 
 .heading_image h3 { color: #EEEBEF; font-family: "Bariol Regular"; font-size: 42px; margin-top: 64px; text-transform: uppercase; text-align: center; }
 
+/* right contact */
+.right-contact { width: 49px; background-color: #1B3E54; height: auto; position: fixed; right: 0px; top: 476px; opacity: 0.8; z-index: 999999999; padding-left: 5px; padding-right: 5px; }
+
+.right-contact_single { border-bottom: 2px #EEEBEF solid; }
+
+.right-contact_single:last-child { border-bottom: 0px; }
+
+.right-contact_phone { width: 100%; height: 49px; }
+
+.right-contact_phone::before { content: "\f095"; font-size: 20px; color: #E0A812; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; font-family: 'FontAwesome'; padding-top: 13px; }
+
+.right-contact_email { width: 100%; height: 49px; }
+
+.right-contact_email::before { content: "\f0e0"; font-size: 20px; color: #E0A812; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; font-family: 'FontAwesome'; padding-top: 13px; }
+
 /******************
 *
 *
