@@ -21,12 +21,22 @@
   height: 279px;
   position: relative;
   margin: 0 auto;
-  & .pre-footer-contain {
+  &-contain {
     width: $site-width;
     margin: 0 auto;
     height: 100%;
     position: relative;
 		padding-top: 57px;
+		overflow: hidden;
+		@include media('xxsmall'){
+			width: 100%;
+		}
+		@include media('xsmall'){
+			width: 100%;
+		}
+		@include media('xxlarge'){
+			width: $site-width;
+		}
   }
 	& h2 {
 		font-size: 25px;
@@ -58,18 +68,65 @@
 	  text-align: left;
 	  font-size: 18px;
 	  color: $color-grey--dark;
+		@include media('xxsmall'){
+			width: 75%;
+		}
+		@include media('xsmall'){
+			width: 75%;
+			padding-left: 20px;
+		}
+		@include media('medium'){
+			width: 28%;
+		}
+		@include media('xxlarge'){
+			padding-left: 0px;
+		}
 	}
 	&-center {
 		width: 47%;
 		float: left;
-		padding-left: 86px;
 		padding-right: 43px;
+		@include media('xxsmall'){
+			display: none;
+		}
+		@include media('xsmall'){
+			display: none;
+			padding-left: 47px;
+		}
+		@include media('medium'){
+			display: block;
+			padding-left: 86px;
+		}
+		@include media('xxlarge'){
+			display: block;
+			padding-left: 86px;
+		}
 	}
 	&-right {
 	  float: left;
 	  width: 25%;
 	  height: 100%;
 	  text-align: right;
+		@include media('xxsmall'){
+			display: none;
+		}
+		@include media('xsmall'){
+			display: none;
+		}
+		@include media('medium'){
+			display: block;
+		}
+		@include media('xxlarge'){
+			display: block;
+		}
+		@include media('xxsmall'){
+		}
+		@include media('xsmall'){
+			padding-right: 20px;
+		}
+		@include media('xxlarge'){
+			padding-right: 0px;
+		}
 	}
 }
 
@@ -140,12 +197,34 @@
 
 .nav-footer {
   width: $footer-nav_width-adjust;
-  display: block;
   float: left;
   padding-top: 10px;
+	@include media('xxsmall'){
+		display: none;
+	}
+	@include media('xsmall'){
+		display: none;
+	}
+	@include media('medium'){
+		display: block;
+	}
+	@include media('xxlarge'){
+		display: block;
+	}
   & ul {
-    width: $site-width;
     margin: 0 auto;
+		@include media('xxsmall'){
+			  width: 100%;
+		}
+		@include media('xsmall'){
+			  width: 100%;
+		}
+		@include media('medium'){
+			  width: auto;
+		}
+		@include media('xxlarge'){
+			  width: $site-width;
+		}
     & li {
       display: inline;
       margin: 10px;

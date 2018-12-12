@@ -68,14 +68,14 @@ $color-alt: $color-green--mid;
 *   padding: 10px;
 *   @media (min-width: breakpoint(large)) { ...
 */
-$breakpoints: (
+$breakpoint: (
   xxlarge: 1600px,
   xlarge: 1400px,
   large: 1200px,
   medium: 1000px,
   small : 800px,
   xsmall: 600px,
-  xxsmall: 400px
+  xxsmall: 599px
 );
 
 /* ============ General Settings ============ */
@@ -87,12 +87,7 @@ $main-page-background-color: $color-blue--lighter;
 
 // Depreciated!!!! PHASE OUT!! use breakpoints up top -^
 $site-width: 1400px;
-/* ^- this is the main, full size width (after wrap),
-		use mixins for the responsive settings in each element, e.g.
-		`@include tablets{
-				width:90%;
-		}` phones | tablets | lowresmonitors
-*/
+
 
 /* ------------ Site Header ------------ */
 

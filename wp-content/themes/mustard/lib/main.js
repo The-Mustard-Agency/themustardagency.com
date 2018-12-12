@@ -28,21 +28,10 @@ function fire_quicklinks() {
 
 }
 
-//match body to sidebar hight
-getSidebarHeight();
-function getSidebarHeight(){
-  var sidebar = document.getElementById('sidebar_inner');//<- Sidebar ID
-  var sidebarHeight = sidebar.offsetHeight;
-  var body = document.getElementById('postBody'); //<- Body ID
-  var contentHeight = body.offsetHeight;
-  var sidebarHeightPixels = sidebarHeight + "px"; //<- add pixel
-  if(contentHeight < sidebarHeight){
-    document.getElementById('postBody').style.minHeight = sidebarHeightPixels;
-  }
-}
+
 
 //open all link in content in a new tab.
-
+/*
 var mainContent = document.getElementById('articleBody').getElementsByTagName('a');
 for (var i = 0; i < mainContent.length; i++) {
     var elem = mainContent[i]
@@ -58,6 +47,8 @@ for (var i = 0; i < mainContent.length; i++) {
 
 		}
 }
+*/
+
 
 
 //hide_popup

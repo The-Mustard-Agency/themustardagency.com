@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div id="postBody" class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+				{% include "partial/content_headers.twig" %}
+			<section class="article-content">
+				<h1 class="article-h1">{{ post.title }}</h1>
+				<div class="article-body">
+					{% for post in blog %}
+						<h2>{{ post.title }}</h2>
+					{% endfor %}
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+{% endblock %}

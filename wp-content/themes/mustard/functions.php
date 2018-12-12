@@ -219,6 +219,9 @@ function wp_admin_bar_my_custom_account_menu( $wp_admin_bar ) {
  * @since 1.4
  */
 
+// Mustard portfolio.
+require_once( __DIR__ . '/include/our-work.php' );
+
 // Define shortcodes.
 require_once( __DIR__ . '/include/shortcodes.php' );
 

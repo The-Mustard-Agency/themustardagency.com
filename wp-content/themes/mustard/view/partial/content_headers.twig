@@ -1,6 +1,6 @@
-{% if post.thumbnail.src %}
-	<div class="page_heading_container">
-		<img class="page_heading_image" style="background-image:url({{post.thumbnail.src}});" />
-		<div class="page_heading_image_over"></div>
+{% if post.turn_off_section %}
+	<div class="heading_image" data-bg="{{ Image(post.background_image).src }}">
+		<h2>{{ post.impact_text }}</h2>
+		<h3>{{ post.sub_text }}</h3>
 	</div>
 {% endif %}

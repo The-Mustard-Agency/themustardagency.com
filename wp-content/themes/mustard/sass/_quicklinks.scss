@@ -15,28 +15,71 @@
 .quicklinks_inner {
   width: 100%;
   margin: 0 auto;
-  height: 320px;
   background-color: $color-blue--mid;
+	@include media('xxsmall'){
+		height: calc( 240px * 2 );
+	}
+	@include media('xsmall'){
+		height: calc( 240px * 2 );
+	}
+	@include media('medium'){
+		height: 320px;
+	}
+	@include media('xxlarge'){
+		height: 320px;
+	}
 	.quicklink_single:nth-child(even){
 		background-color: $color-blue--dark;
 	}
 	& .quicklink_single{
-		height: 320px;
 		float: left;
 		cursor: pointer;
+		@include media('xxsmall'){
+			height: 240px;
+			width: 33.3%!important;
+		}
+		@include media('xsmall'){
+			height: 240px;
+			width: 33.3%!important;
+		}
+		@include media('medium'){
+			width: 20%!important;
+			height: 320px;
+		}
+		@include media('xxlarge'){
+			width: 20%!important;
+			height: 320px;
+		}
 	  & .quicklink_item {
-	    height: 251.5px;
 	    background-size: cover;
 	    opacity: 1;
 			transition: height 2s;
+			@include media('xxsmall'){
+				height: 178.5px;
+			}
+			@include media('xsmall'){
+				height: 178.5px;
+			}
+			@include media('xxlarge'){
+				height: 251.5px;
+			}
 	    &:hover {
 	      opacity: 1;
 	    }
 	  }
 		& .quicklink_title{
 			width: 100%;
-			height: 67.19px;
+
 			transition: height 2s;
+			@include media('xxsmall'){
+				height: 67.19px;
+			}
+			@include media('xsmall'){
+				height: 67.19px;
+			}
+			@include media('xxlarge'){
+				height: 67.19px;
+			}
 			& a{
 				display: flex;
 				justify-content: center;

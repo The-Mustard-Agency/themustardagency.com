@@ -1,9 +1,6 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="sidebar">
-				{{ page_sidebar }}
-	</div>
 	<div id="postBody" class="content-wrapper">
 		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 				{% include "partial/content_headers.twig" %}
@@ -12,9 +9,7 @@
 				<div class="article-body">
 					{{ post.content }}
 				</div>
-
 			</section>
-
 		</article>
 	</div><!-- /content-wrapper -->
 {% endblock %}

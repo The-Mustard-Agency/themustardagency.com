@@ -17,27 +17,19 @@
 			{% if fn('is_front_page') %}
 			{% else %}
 				{% if title %}<h1>{{ title }}</h1>{% endif %}
-				<div class="wrapper {{ sidebar_class }} main_page_wrap">
-					{% block content %}
-						Sorry, no content
-					{% endblock %}
-			{% endif %}
-					{% if fn('is_front_page') %}
-							{% include "/homepage/findoutmore.twig" %}
-							{% include "/homepage/tile.twig" %}
-							{% include "/homepage/cta2.twig" %}
-							{% include "/homepage/findoutmore2.twig" %}
-							{% include "/homepage/testimonials.twig" %}
-					{% endif %}
-				</div>
-			{% if fn('is_front_page') %}
-			{% else %}
-				{% if sidebar %}
-					<aside class="layout-sidebar">
-						{{ sidebar }}
-					</aside>
+					<div class="wrapper {{ sidebar_class }} main_page_wrap">
+						{% block content %}
+							Sorry, no content
+						{% endblock %}
 				{% endif %}
-			{% endif %}
+						{% if fn('is_front_page') %}
+								{% include "/homepage/findoutmore.twig" %}
+								{% include "/homepage/tile.twig" %}
+								{% include "/homepage/cta2.twig" %}
+								{% include "/homepage/findoutmore2.twig" %}
+								{% include "/homepage/testimonials.twig" %}
+						{% endif %}
+					</div>
 		</section>
 
 		{% if fn('is_front_page') %}

@@ -17,6 +17,7 @@ body {
 
 #content {
   height: auto;
+
 }
 
 .content-wrapper {
@@ -110,27 +111,279 @@ article {
   //margin: 0 auto;
   overflow: hidden;
   position: relative;
+	@include media('xxsmall'){
+		width: 100%;
+	}
+	@include media('xsmall'){
+		width: 100%;
+	}
+	@include media('xxlarge'){
+		width: 100%;
+	}
 }
 
 .article-content {
-  padding: 30px 0 30px 30px;
+	width: $site-width;
+	margin: 0 auto;
+  padding: 74px 0px 30px 30px;
 }
 
 .post-wrapper {
-  margin: 30px;
+  margin: 0px;
 }
 
 .global_cta{
 	width: 100%;
 	height: 177px;
-	background-color: $color-pink--mid;
+	margin-top: 80px;
+	@include gradient($color-pink--mid, $color-pink--dark);
 	&_inner{
 		width: $site-width;
 		margin: 0 auto;
+		padding-top: 78px;
 		& h2{
-			font-sizE: 35px;
+			font-size: 35px;
 			color: $color-white;
 			text-transform: uppercase;
+			width: 75%;
+			float: left;
 		}
+		& button{
+			float: right;
+			background-color: $color-yellow--mid;
+			margin: -9px 0;
+		}
+
+	}
+}
+
+
+/* out work page */
+
+.filter{
+	width: 100%;
+	height: auto;
+	&_inner{
+		width: $site-width;
+		margin: 0 auto;
+		& p{
+			margin-right: 20px;
+			float: left;
+			width: auto;
+			text-align: center;
+			text-transform: capitalize;
+			transition: color .3s;
+			&:hover{
+				color: $color-pink--mid;
+			}
+			&:active{
+				color: $color-pink--mid;
+			}
+		}
+	}
+}
+
+.work_gallery{
+	width: 100%;
+	height: 411px;
+	&_row{
+		height: 411px;
+		width: 100%;
+		&_single{
+			cursor: pointer;
+			background-color: $color-blue--mid;
+			background-size: cover;
+			background-position: center;
+			height: 411px;
+			width: 30%;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			float: left;
+			cursor: pointer;
+			&:nth-child(3,3){
+				margin-right: 0px;
+			}
+			&::after{
+				height: 100%;
+				width: 100%;
+				display: block;
+				background-color: $color-white;
+				transition: background-color 2s;
+			}
+			&:hover{
+				&::after{
+					background-color: $color-blue--mid;
+					content: attr(data-title);
+					color: $color-white;
+					font-family: 'Bariol Regular';
+					font-size: 20px;
+					height: 100%;
+					width: 100%;
+					display: flex;
+				  justify-content: center;
+				  align-items: center;
+				}
+			}
+		}
+	}
+}
+
+
+/*  contact page  */
+
+.contact-header{
+	height: 460px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-top: 30px;
+	&-inner{
+		width: 800px;
+		height: 100%;
+		margin: 0 auto;
+		& h2{
+			color: $color-yellow--mid;
+			font-family: 'HighTide';
+			font-size: 75px;
+			text-align: center;
+		}
+		i{
+			padding-top: 30px;
+			width: 100%;
+			height: 246px;
+			font-size: 151px;
+			margin: 0 auto;
+			text-align: center;
+			color: $color-white;
+		}
+		h3{
+			font-size: 45px;
+			text-align: center;
+			color: $color-white;
+		}
+		.comment-icon{
+			width: 100%;
+		}
+		&-left{
+			width: 50%;
+			height: 100%;
+			float: left;
+			&:hover{
+				& i{
+						color: $color-blue--mid;
+				}
+				& h3{
+						color: $color-blue--mid;
+				}
+			}
+		}
+		&-right{
+			width: 50%;
+			height: 100%;
+			float: left;
+			&:hover{
+				& i{
+						color: $color-blue--mid;
+				}
+				& h3{
+						color: $color-blue--mid;
+				}
+			}
+		}
+	}
+}
+
+#sales{
+	width: 800px;
+	margin: 0 auto;
+}
+
+#support{
+	width: 800px;
+	margin: 0 auto;
+}
+
+.itemblock{
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	border-radius: 7px;
+	background-color: $color-white;
+	border: 2px $color-yellow--mid solid;
+	& h2{
+		margin-bottom: 20px;
+	}
+	& p{
+		font-size: 20px;
+		font-weight: 600;
+		text-align: left;
+		margin-bottom: 5px;
+		&::before{
+		}
+	}
+}
+
+.contact-block{
+	width: 100%;
+	height: auto;
+	padding: 20px;
+	padding-bottom: 15px;
+	margin-bottom: 20px;
+	border-radius: 7px;
+	background-color: $color-white;
+	border: 2px $color-yellow--mid solid;
+	& p{
+		font-size: 20px;
+		font-weight: 600;
+		text-align: left;
+		margin-bottom: 5px;
+		&::before{
+		}
+	}
+	& .phone{
+		&::before{
+			content: "\f095";
+			margin-left: 5px;
+			margin-right: 20px;
+			font-family: "FontAwesome";
+		}
+	}
+	& .address{
+		&::before{
+			content: "\f3c5";
+			margin-left: 5px;
+			margin-right: 20px;
+			font-family: "FontAwesome";
+		}
+	}
+	& .contact-form{
+		&::before{
+			content: "\f0a1";
+			margin-left: 5px;
+			margin-right: 20px;
+			font-family: "FontAwesome";
+		}
+	}
+	label{
+		width: 100%!important;
+	}
+	input{
+		width: 100%!important;
+		padding: 10px;
+		border-width: 0px;
+		border-radius: 7px;
+		background-color: $color-grey--light;
+	}
+	textarea{
+		width: 100%!important;
+		padding: 10px;
+		border-width: 0px;
+		border-radius: 7px;
+		background-color: $color-grey--light;
+	}
+	input[type="submit"]{
+		width: 250px;
 	}
 }

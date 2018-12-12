@@ -40,6 +40,9 @@ h5 {
 }
 
 .article-body {
+	& h2{
+		margin-bottom: 20px;
+	}
   & ul {
     list-style: disc;
     & li {
@@ -66,22 +69,22 @@ a {
 
 h1 {
   font-size: 22px;
-  color: $color-green--mid;
+  color: $color-blue--mid;
 }
 
 h2 {
   font-size: 20px;
-  color: $color-green--mid;
+  color: $color-blue--light;
 }
 
 h3 {
   font-size: 18px;
-  color: $color-green--mid;
+  color: $color-blue--light;
 }
 
 h4 {
-  font-size: 16px;
-  color: $color-green--mid;
+  font-size: 17px;
+  color: $color-blue--light;
 }
 
 strong {
@@ -98,6 +101,7 @@ blockquote {
 }
 
 .article-h1 {
+	text-transform: uppercase;
   margin-bottom: 32px;
   font-size: 32px;
   color: $color-navy--dark;
@@ -113,7 +117,7 @@ p {
   & .item{
     & a{
       & h4{
-        color: $color-green--mid;
+        color: $color-blue--mid;
       }
     }
     &:hover {
@@ -144,7 +148,7 @@ p {
   & p {
     color: $color-grey--dark;
     line-height: 1.4;
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 

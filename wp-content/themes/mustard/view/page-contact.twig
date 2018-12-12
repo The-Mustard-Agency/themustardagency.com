@@ -1,0 +1,72 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div id="postBody" class="content-wrapper">
+		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+				<div class="contact-header" data-bg="{{ Image(post.background_image).src }}">
+					<div class="contact-header-inner">
+						<h2>How can we help</h2>
+						<div class="contact-header-inner-left" onclick="showContact('sales');">
+							<i class="fa fa-comment"></i>
+							<h3>Question about a service</h3>
+						</div>
+						<div class="contact-header-inner-right" onclick="showContact('support');">
+							<i class="fa fa-cog"></i>
+							<h3>Customer support</h3>
+						</div>
+					</div>
+				</div>
+			<section class="article-content">
+				<div class="article-body">
+					<div id="sales" class="contactBoth" style="display: none;">
+						<div class="contact-block phone">
+							<p>Call us on {{ options.school_phone }}</p>
+						</div>
+						<div class="contact-block contact-form">
+							<p>Contact us</p>
+							{{ function('do_shortcode', '[contact-form-7 id="1339" title="Contact form 1"]') }}
+						</div>
+						<div class="contact-block address">
+							<p>{{ options.school_address }}</p>
+						</div>
+					</div>
+
+					<div id="support" class="contactBoth" style="display: none;">
+						<div class="contact-block contact-form">
+							<p>Submit a support ticket</p>
+							{{ function('do_shortcode', '[contact-form-7 id="1339" title="Contact form 1"]') }}
+						</div>
+						<div class="contact-block phone">
+							<p>Call us on {{ options.school_phone }}</p>
+						</div>
+						<div class="contact-block address">
+							<p>{{ options.school_address }}</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+
+	<script>
+		function showContact(whichContact){
+			var showThis = document.getElementById(whichContact);
+			var both = document.getElementsByClassName("contactBoth");
+			var k;
+			
+
+			for (k = 0; k < both.length; k++) {
+						both[k].style.display = "none";
+			}
+
+			if(showThis.style.display == "none"){
+				showThis.style.display = "block";
+			} else {
+				showThis.style.display = "none";
+			}
+
+
+
+		}
+	</script>
+{% endblock %}

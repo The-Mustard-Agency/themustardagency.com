@@ -1,6 +1,5 @@
 <?php
 if( function_exists('acf_add_options_page') ) {
-
 	$page = acf_add_options_page(array(
 		'page_title' 	=> 'Mustard General Settings',
 		'menu_title' 	=> 'Mustard Settings',
@@ -10,11 +9,9 @@ if( function_exists('acf_add_options_page') ) {
 		'position' => 99,
 		'redirect' 	=> false
 	));
-
 }
 
 if( function_exists('acf_add_options_page') ) {
-
 	$page = acf_add_options_page(array(
 		'page_title' 	=> 'Homepage Welcome',
 		'menu_title' 	=> 'Homepage Welcome',
@@ -24,11 +21,9 @@ if( function_exists('acf_add_options_page') ) {
 		'position' => "4.3",
 		'redirect' 	=> false
 	));
-
 }
 
 if( function_exists('acf_add_options_page') ) {
-
 	$page = acf_add_options_page(array(
 		'page_title' 	=> 'Testimonials',
 		'menu_title' 	=> 'testimonials',
@@ -38,11 +33,9 @@ if( function_exists('acf_add_options_page') ) {
 		'position' => "4.5",
 		'redirect' 	=> false
 	));
-
 }
 
 if( function_exists('acf_add_options_page') ) {
-
 	$page = acf_add_options_page(array(
 		'page_title' 	=> 'Global CTA',
 		'menu_title' 	=> 'global cta',
@@ -52,11 +45,9 @@ if( function_exists('acf_add_options_page') ) {
 		'position' => "4.6",
 		'redirect' 	=> false
 	));
-
 }
 
 if( function_exists('acf_add_options_page') ) {
-
 	$page = acf_add_options_page(array(
 		'page_title' 	=> 'Tiles',
 		'menu_title' 	=> 'tiles',
@@ -66,11 +57,9 @@ if( function_exists('acf_add_options_page') ) {
 		'position' => "4.7",
 		'redirect' 	=> false
 	));
-
 }
 
 if( function_exists('acf_add_options_page') ) {
-
 	$page = acf_add_options_page(array(
 		'page_title' 	=> 'Footer stuff',
 		'menu_title' 	=> 'footer stuff',
@@ -80,7 +69,6 @@ if( function_exists('acf_add_options_page') ) {
 		'position' => "4.8",
 		'redirect' 	=> false
 	));
-
 }
 
 
@@ -125,14 +113,12 @@ function pilau_change_post_object_label() {
 //remove usused items
 
 function remove_menus(){
-
   remove_menu_page( 'edit-comments.php' );          //Comments
   remove_menu_page( 'themes.php' );                 //Appearance
   remove_menu_page( 'plugins.php' );                //Plugins
   add_menu_page( 'Menu System', 'Menu System', 'manage_options', 'nav-menus.php', '', 'dashicons-menu', 90 );
   remove_menu_page( 'tools.php' );                  //Tools
   remove_menu_page( 'options-general.php' );        //Settings
-
 }
 
 if( function_exists('acf_add_local_field_group') ):

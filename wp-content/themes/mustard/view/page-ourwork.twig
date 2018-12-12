@@ -1,0 +1,133 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+		<article class="post-type-search" id="post-search">
+			{% include "partial/content_headers.twig" %}
+			<section class="article-content">
+				<h1 class="article-h1">{{ post.title }}</h1>
+				<div class="article-body">
+					{{ post.content }}
+					{% for this in work %}
+
+					{% endfor %}
+
+					<div class="filter">
+						<div class="filter_inner">
+							<p>Filter by sector: </p>
+							<p  class="filter all_button" onclick='doFilterSector("all");'>View all</p>
+							{% set newArray = [] %}
+							{% for prefilter in work %}
+								{% for afilter in prefilter.terms %}
+									{% if afilter.taxonomy == "sector" %}
+										{% if afilter.name not in newArray %}
+											<p class="filter {{ afilter.name }}_button" onclick='doFilterSector("{{ afilter.name }}");'>{{ afilter.name }}</p>
+											{% set newArray = newArray|merge([afilter.name]) %}
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+						</div>
+					</div>
+
+<div class="clearfix"></div>
+
+					<div class="filter">
+						<div class="filter_inner">
+							<p>Filter by service: </p>
+							<p  class="filter all_button" onclick='doFilterService("all");'>View all</p>
+							{% set newArray = [] %}
+							{% for prefilter in work %}
+								{% for afilter in prefilter.terms %}
+									{% if afilter.taxonomy == "services" %}
+										{% if afilter.name not in newArray %}
+											<p class="filter {{ afilter.name }}_button" onclick='doFilterService("{{ afilter.name }}");'>{{ afilter.name }}</p>
+											{% set newArray = newArray|merge([afilter.name]) %}
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+						</div>
+					</div>
+
+					<div class="clearfix"></div>
+					<div class="work_gallery">
+						<div class="work_gallery_row">
+							{% for job in work %}
+							<div alt="{{ job.title }}" onclick=" window.location = '{{ job.link }}';" class="work_gallery_row_single all {% for thing in job.terms %}{{ thing.name }} {% endfor %}" style="display: block;" data-bg="{{ job.thumbnail.src }}" data-title="{{ job.title }}">
+							</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			</section>
+		</article>
+	</div><!-- /content-wrapper -->
+
+
+
+<script>
+//adding filters:
+function doFilterService(whattohide){
+	var all = document.getElementsByClassName("work_gallery_row_single");
+	var x = document.getElementsByClassName(whattohide);
+	var active = whattohide + "_button";
+	var getButton = document.getElementsByClassName(active);
+	var i;
+	var j;
+	var k;
+
+	var allButtons = document.getElementsByClassName("filter");
+	for (k = 0; k < allButtons.length; k++) {
+				allButtons[k].style.color = "#565656";
+	}
+
+	var getBtn = document.getElementsByClassName(active)[0];
+	getBtn.style.color = "#E10586";
+	console.log(getBtn);
+
+	for (i = 0; i < all.length; i++) {
+			if(all[i].style.display == "block"){
+				all[i].style.display = "none";
+			}
+	}
+	for (j = 0; j < x.length; j++) {
+			if(x[j].style.display == "none"){
+				x[j].style.display = "block";
+			}
+	}
+}
+
+function doFilterSector(whattohide){
+	var all = document.getElementsByClassName("work_gallery_row_single");
+	var x = document.getElementsByClassName(whattohide);
+	var active = whattohide + "_button";
+	var getButton = document.getElementsByClassName(active);
+	var i;
+	var j;
+	var k;
+
+	var allButtons = document.getElementsByClassName("filter");
+	for (k = 0; k < allButtons.length; k++) {
+				allButtons[k].style.color = "#565656";
+	}
+
+	var getBtn = document.getElementsByClassName(active)[0];
+	getBtn.style.color = "#E10586";
+	console.log(getBtn);
+
+	for (i = 0; i < all.length; i++) {
+			if(all[i].style.display == "block"){
+				all[i].style.display = "none";
+			}
+	}
+	for (j = 0; j < x.length; j++) {
+			if(x[j].style.display == "none"){
+				x[j].style.display = "block";
+			}
+	}
+}
+
+</script>
+
+{% endblock %}

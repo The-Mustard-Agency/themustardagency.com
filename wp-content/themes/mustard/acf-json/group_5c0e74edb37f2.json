@@ -1,0 +1,105 @@
+{
+    "key": "group_5c0e74edb37f2",
+    "title": "Page Headers",
+    "fields": [
+        {
+            "key": "field_5c0e750c4b9a6",
+            "label": "Page header - background image",
+            "name": "background_image",
+            "type": "image",
+            "instructions": "Background image, filters applied automatically.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": 600,
+            "min_height": "",
+            "min_size": "",
+            "max_width": 1800,
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "png, jpg"
+        },
+        {
+            "key": "field_5c0e75704b9a7",
+            "label": "Impact text",
+            "name": "impact_text",
+            "type": "text",
+            "instructions": "This is the yellow text..",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c0e758e4b9a8",
+            "label": "sub text",
+            "name": "sub_text",
+            "type": "text",
+            "instructions": "the sub text.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5c0e75acca160",
+            "label": "turn off section",
+            "name": "turn_off_section",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "on",
+            "ui_off_text": "off"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "!=",
+                "value": "12"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1544603625
+}
