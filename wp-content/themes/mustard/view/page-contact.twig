@@ -33,11 +33,11 @@
 
 					<div id="support" class="contactBoth" style="display: none;">
 						<div class="contact-block contact-form">
-							<p>Submit a support ticket</p>
-							{{ function('do_shortcode', '[contact-form-7 id="1339" title="Contact form 1"]') }}
+							<p>Submit a support ticket for the fastest response</p>
+							{{ function('do_shortcode', '[contact-form-7 id="1363" title="Contact Support"]') }}
 						</div>
 						<div class="contact-block phone">
-							<p>Call us on {{ options.school_phone }}</p>
+							<p>Or call us and we can file a ticket for you {{ options.school_phone }}</p>
 						</div>
 						<div class="contact-block address">
 							<p>{{ options.school_address }}</p>
@@ -53,7 +53,7 @@
 			var showThis = document.getElementById(whichContact);
 			var both = document.getElementsByClassName("contactBoth");
 			var k;
-			
+
 
 			for (k = 0; k < both.length; k++) {
 						both[k].style.display = "none";
