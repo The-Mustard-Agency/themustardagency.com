@@ -3652,7 +3652,7 @@ p { margin-bottom: 32px; font-size: 19px; color: #16558d; }
 *
 *
 ******************/
-html { font-size: 100%; }
+html { font-size: 100%; background-color: #1B3E54; }
 
 body { -webkit-font-smoothing: antialiased; background-color: #EEEBEF; }
 
@@ -3846,6 +3846,31 @@ article { background-color: #EEEBEF; min-height: 50vh; height: auto; }
 .blog-container_single h3 { min-height: 110px; padding: 30px; font-size: 25px; font-weight: 300; color: #565656; }
 
 .blog-container_single hr { width: 0px; }
+
+/* mustard blocks */
+.mustard .mustard_block { width: 100%; height: auto; min-height: 592px; }
+
+.mustard .mustard_block_inner { height: auto; min-height: 592px; width: 1400px; margin: 0 auto; overflow: auto; }
+
+.mustard .mustard_block_inner_left { background-size: cover; background-position: center; float: left; height: auto; min-height: 592px; width: 43%; }
+
+.mustard .mustard_block_inner_right { float: right; height: 100%; width: 56%; padding: 74px; padding-top: 96px; padding-bottom: 0px; }
+
+.mustard .mustard_block_inner_right h2 { font-size: 34.4px; }
+
+.mustard .mustard_block_inner_right p { font-size: 25.4px; color: #565656; }
+
+.mustard .mustard_block:nth-child(odd) { background-color: #EEEBEF !important; }
+
+.mustard .mustard_block:nth-child(even) .mustard_block_inner_left { float: right !important; }
+
+.mustard .mustard_block:nth-child(even) .mustard_block_inner_right { float: left !important; padding-left: 0px; }
+
+.mustard .mustard_block:nth-child(even) .mustard_block_inner_right h2 { color: #E0A812; }
+
+.mustard .mustard_block:nth-child(even) .mustard_block_inner_right p { color: #EEEBEF; }
+
+.mustard .mustard_block:nth-child(even) .mustard_block_inner_right button { background-color: #E10586; }
 
 /* WP parts */
 /******************
@@ -4540,7 +4565,7 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 .copyright { margin-top: 30px; color: #565656; margin-bottom: 5px; }
 
-.footer { background-color: #1b3647; height: 54px; padding: 10px; }
+.footer { background-color: #1B3E54; height: 54px; padding: 10px; }
 
 .footer-contain { width: 1400px; margin: 0 auto; }
 

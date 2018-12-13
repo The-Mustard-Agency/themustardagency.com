@@ -4,12 +4,27 @@
 	<div id="postBody" class="content-wrapper">
 		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 				{% include "partial/content_headers.twig" %}
-			<section class="article-content">
-				<h1 class="article-h1">{{ post.title }}</h1>
-				<div class="article-body">
-					{{ post.content }}
+<div class="mustard">
+	{% for service in post.get_field('box_reapeater') %}
+		<div class="mustard_block" style="background-color:{{ service.box_background_color }};">
+			<div class="mustard_block_inner">
+				<div class="mustard_block_inner_left" data-bg="{{ service.box_side_image }}">
 				</div>
-			</section>
+				<div class="mustard_block_inner_right">
+					<h2>{{ service.box_title }}</h2>
+					<p>{{ service.box_the_text }}</p>
+					<button onclick="window.location='{{ service.box_link }}';">see more</button>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+</div>
+<section class="article-content">
+
+	<div class="article-body">
+		{{ post.content }}
+	</div>
+</section>
 		</article>
 	</div><!-- /content-wrapper -->
 {% endblock %}

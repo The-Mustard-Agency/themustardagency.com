@@ -8,6 +8,7 @@
 
 html {
   font-size: 100%;
+	background-color: $color-blue--mid;
 }
 
 body {
@@ -514,6 +515,68 @@ $susy: (
 		}
 		& hr{
 			width: 0px;
+		}
+	}
+}
+
+/* mustard blocks */
+.mustard{
+	& .mustard_block{
+		width: 100%;
+		height: auto;
+		min-height: 592px;
+		&_inner{
+			height: auto;
+			min-height: 592px;
+			width: $site-width;
+			margin: 0 auto;
+			overflow: auto;
+			&_left{
+				background-size: cover;
+				background-position: center;
+				float: left;
+				height: auto;
+				min-height: 592px;
+				width: 43%;
+			}
+			&_right{
+				float: right;
+				height: 100%;
+				width: 56%;
+				padding: 74px;
+				padding-top: 96px;
+				padding-bottom: 0px;
+				& h2{
+					font-size: 34.4px;
+				}
+				& p{
+					font-size: 25.4px;
+					color: $color-grey--dark;
+				}
+			}
+		}
+		&:nth-child(odd){
+			background-color: $color-white!important;
+		}
+		&:nth-child(even){
+			& .mustard_block_inner{
+				&_left{
+					float: right!important;
+				}
+				&_right{
+					float: left!important;
+					padding-left: 0px;
+					& h2{
+						color: $color-yellow--mid;
+					}
+					& p{
+						color: $color-white;
+					}
+					& button{
+						background-color: $color-pink--mid;
+					}
+				}
+			}
 		}
 	}
 }
