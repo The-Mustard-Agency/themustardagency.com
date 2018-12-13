@@ -4033,7 +4033,7 @@ button { cursor: pointer; background-color: #07789B; height: 52px; width: flex; 
 
 button:hover { background-color: #2475bc; opacity: 0.75; }
 
-button:active { background-color: #2475bc; border-width: 4px; border-color: #2475bc; }
+button:active { background-color: #2475bc; border-width: 0px; border-color: #2475bc; }
 
 button .icon { text-align: right; float: right; width: 10px; padding-right: 20px; }
 
@@ -4176,7 +4176,7 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 .tiles_inner_row_tile .tile figcaption h3 { color: #EEEBEF; text-align: center; }
 
-.tiles_inner_row_tile .tile figcaption p { color: #EEEBEF; text-align: center; }
+.tiles_inner_row_tile .tile figcaption p { padding: 30px; color: #EEEBEF; text-align: center; }
 
 .tiles_inner_row_tile:nth-child(2) figcaption { background-color: #07789B; }
 

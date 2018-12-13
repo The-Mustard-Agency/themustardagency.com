@@ -29,9 +29,7 @@
 							{% endfor %}
 						</div>
 					</div>
-
 <div class="clearfix"></div>
-
 					<div class="filter">
 						<div class="filter_inner">
 							<p>Filter by service: </p>
@@ -67,6 +65,8 @@
 
 
 <script>
+ScrollReveal().reveal('.all');
+
 //adding filters:
 function doFilterService(whattohide){
 	var all = document.getElementsByClassName("work_gallery_row_single");
