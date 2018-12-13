@@ -3766,7 +3766,7 @@ article { background-color: #EEEBEF; min-height: 50vh; height: auto; }
 @media (min-width: 1200px) { .work_gallery_row_single { width: 31.8%; }
   .work_gallery_row_single:nth-child(3n) { margin-right: 0px; } }
 
-.work_gallery_row_single::after { height: 100%; width: 100%; display: block; background-color: #EEEBEF; transition: background-color 2s; }
+.work_gallery_row_single::after { height: 100%; width: 0%; display: block; background-color: #EEEBEF; transition: all 2s; }
 
 .work_gallery_row_single:hover::after { background-color: #1B3E54; content: attr(data-title); color: #EEEBEF; font-family: 'Bariol Regular'; font-size: 20px; height: 100%; width: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
 
@@ -3822,6 +3822,30 @@ article { background-color: #EEEBEF; min-height: 50vh; height: auto; }
 .contact-block textarea { width: 100% !important; padding: 10px; border-width: 0px; border-radius: 7px; background-color: #A2AEB6; }
 
 .contact-block input[type="submit"] { width: 250px; }
+
+/* blog page */
+.blog-container { width: 100%; height: 411px; }
+
+.blog-container_single { cursor: pointer; background-size: cover; background-position: center; height: 411px; margin-right: 31px; margin-bottom: 31px; float: left; cursor: pointer; transition: height 2s; }
+
+@media (max-width: 599px) { .blog-container_single { width: 100%; } }
+
+@media (min-width: 600px) { .blog-container_single { width: 100%; } }
+
+@media (min-width: 1000px) { .blog-container_single { width: 47%; } }
+
+@media (min-width: 1200px) { .blog-container_single { width: 31.8%; }
+  .blog-container_single:nth-child(3n) { margin-right: 0px; } }
+
+.blog-container_single:hover .blog_img { background-size: 120%; }
+
+.blog-container_single:hover hr { width: 100%; background-color: #E10586; transition: width .3s ease-in-out; }
+
+.blog-container_single .blog_img { height: 280px; width: 100%; background-position: center; background-size: 100%; transition: background-size .3s ease-in-out; }
+
+.blog-container_single h3 { min-height: 110px; padding: 30px; font-size: 25px; font-weight: 300; color: #565656; }
+
+.blog-container_single hr { width: 0px; }
 
 /* WP parts */
 /******************
@@ -4368,6 +4392,8 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 @media (min-width: 600px) { .quicklinks_inner .quicklink_single .quicklink_item { height: 178.5px; } }
 
+@media (min-width: 1400px) { .quicklinks_inner .quicklink_single .quicklink_item { height: 259.5px; } }
+
 @media (min-width: 1600px) { .quicklinks_inner .quicklink_single .quicklink_item { height: 251.5px; } }
 
 .quicklinks_inner .quicklink_single .quicklink_item:hover { opacity: 1; }
@@ -4377,6 +4403,8 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 @media (max-width: 599px) { .quicklinks_inner .quicklink_single .quicklink_title { height: 67.19px; } }
 
 @media (min-width: 600px) { .quicklinks_inner .quicklink_single .quicklink_title { height: 67.19px; } }
+
+@media (min-width: 1400px) { .quicklinks_inner .quicklink_single .quicklink_title { height: 67.19px; } }
 
 @media (min-width: 1600px) { .quicklinks_inner .quicklink_single .quicklink_title { height: 67.19px; } }
 
@@ -4528,7 +4556,7 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 .footer_copywright p { margin-bottom: 0px; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #A2AEB6; }
 
-.nav-footer { width: 300px; float: left; padding-top: 10px; }
+.nav-footer { width: 300px; float: right; padding-top: 10px; width: auto; }
 
 @media (max-width: 599px) { .nav-footer { display: none; } }
 
@@ -4546,7 +4574,7 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 @media (min-width: 1000px) { .nav-footer ul { width: auto; } }
 
-@media (min-width: 1600px) { .nav-footer ul { width: 1400px; } }
+@media (min-width: 1600px) { .nav-footer ul { width: auto; } }
 
 .nav-footer ul li { display: inline; margin: 10px; }
 

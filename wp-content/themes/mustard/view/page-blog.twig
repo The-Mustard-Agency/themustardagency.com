@@ -8,9 +8,11 @@
 				<h1 class="article-h1">{{ post.title }}</h1>
 				<div class="article-body">
 					<div class="blog-container">
-						{% for post in blog %}
-							<div class="blog-container-single" onclick="window.location = '{{ post.link }}';">
-								<h2>{{ post.title }}</h2>
+						{% for blogpost in blog %}
+							<div onclick="window.location = '{{ blogpost.link }}';" class="blog-container_single all" style="display: block;"  data-title="{{ blogpost.title }}">
+								<div class="blog_img" alt="{{ blogpost.title }}" data-bg="{{ blogpost.thumbnail.src }}" ></div>
+								<h3>{{ blogpost.title }}</h3>
+								<hr />
 							</div>
 						{% endfor %}
 					</div>

@@ -197,8 +197,9 @@
 
 .nav-footer {
   width: $footer-nav_width-adjust;
-  float: left;
+  float: right;
   padding-top: 10px;
+	width: auto;
 	@include media('xxsmall'){
 		display: none;
 	}
@@ -223,7 +224,7 @@
 			  width: auto;
 		}
 		@include media('xxlarge'){
-			  width: $site-width;
+			  width: auto;
 		}
     & li {
       display: inline;

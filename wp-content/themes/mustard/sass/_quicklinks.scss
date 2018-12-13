@@ -60,6 +60,9 @@
 			@include media('xsmall'){
 				height: 178.5px;
 			}
+			@include media('xlarge'){
+				height: 259.5px;
+			}
 			@include media('xxlarge'){
 				height: 251.5px;
 			}
@@ -69,12 +72,14 @@
 	  }
 		& .quicklink_title{
 			width: 100%;
-
 			transition: height 2s;
 			@include media('xxsmall'){
 				height: 67.19px;
 			}
 			@include media('xsmall'){
+				height: 67.19px;
+			}
+			@include media('xlarge'){
 				height: 67.19px;
 			}
 			@include media('xxlarge'){
