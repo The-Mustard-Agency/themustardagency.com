@@ -1,0 +1,26 @@
+{
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "aaemnnosttv/wordpress-core-phpunit-includes",
+                "type": "wordpress-tests-core",
+                "version": "4.7",
+                "source": {
+                    "type": "svn",
+                    "url": "https://develop.svn.wordpress.org/",
+                    "reference": "tags/4.7/tests/phpunit/includes/"
+                },
+                "require": {
+                    "aaemnnosttv/wordpress-tests-core-installer": "~0.1"
+                }
+            }
+        }
+    ],
+    "require": {
+        "aaemnnosttv/wordpress-core-phpunit-includes": "4.7"
+    },
+    "extra": {
+        "wordpress-tests-core-dir": "tests/core"
+    }
+}

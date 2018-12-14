@@ -58,7 +58,8 @@
 #Jenkinsfiles
 !Jenkinsfile
 !/bin/
-
+!composer.json
+!.circleci
 
 # ignore OS generated files
 ehthumbs.db
