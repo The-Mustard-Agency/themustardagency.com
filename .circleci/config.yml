@@ -26,6 +26,12 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
+
+      - run:
+          name: Install wp
+          command: |
+            ./bin/install-wp-tests.sh
+
       - run: composer install -n --prefer-dist
 
       - save_cache:
