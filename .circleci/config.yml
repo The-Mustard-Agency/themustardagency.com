@@ -29,9 +29,9 @@ jobs:
 
       - run:
           name: Install wp
-          command:
-            - bash chmod --recursive a+rwx ./bin/do-tests.sh
-            - bash ./bin/install-wp-tests.sh
+          command: |
+            bash chmod --recursive a+rwx ./bin/do-tests.sh
+            bash ./bin/install-wp-tests.sh
 
       - run: composer install -n --prefer-dist
 
