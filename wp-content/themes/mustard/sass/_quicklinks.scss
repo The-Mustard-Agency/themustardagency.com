@@ -1,21 +1,21 @@
 /******************
 *
 *
-*  Footer quicklinks
+*	Footer quicklinks
 *
 *
 ******************/
 
 .quicklinks_container {
-  height: $quicklinks-height;
-  width: 100%;
-  background-color: $color-blue--mid;
+	width: 100%;
+	height: $quicklinks-height;
+	background-color: $color-blue--mid;
 }
 
 .quicklinks_inner {
-  width: 100%;
-  margin: 0 auto;
-  background-color: $color-blue--mid;
+	width: 100%;
+	margin: 0 auto;
+	background-color: $color-blue--mid;
 	@include media('xxsmall'){
 		height: calc( 240px * 2 );
 	}
@@ -35,12 +35,12 @@
 		float: left;
 		cursor: pointer;
 		@include media('xxsmall'){
-			height: 240px;
 			width: 33.3%!important;
+			height: 240px;
 		}
 		@include media('xsmall'){
-			height: 240px;
 			width: 33.3%!important;
+			height: 240px;
 		}
 		@include media('medium'){
 			width: 20%!important;
@@ -50,9 +50,9 @@
 			width: 20%!important;
 			height: 320px;
 		}
-	  & .quicklink_item {
-	    background-size: cover;
-	    opacity: 1;
+		& .quicklink_item {
+			background-size: cover;
+			opacity: 1;
 			transition: height .3s;
 			@include media('xxsmall'){
 				height: 178.5px;
@@ -66,10 +66,10 @@
 			@include media('xxlarge'){
 				height: 251.5px;
 			}
-	    &:hover {
-	      opacity: 1;
-	    }
-	  }
+			&:hover {
+				opacity: 1;
+			}
+		}
 		& .quicklink_title{
 			width: 100%;
 			transition: height .3s;
@@ -87,34 +87,34 @@
 			}
 			& a{
 				display: flex;
-				justify-content: center;
 				align-items: center;
+				justify-content: center;
 				height: 100%;
 				font-size: 24px;
 			}
 		}
-	  & .quicklink_item-button {
-	    height: 100%;
-	    float: left;
-	    background-color: $color-blue--mid;
-	    background-size: cover;
-	    height: $quicklinks-button-height;
-	    text-align: center;
-	    margin-top: 25px;
-	    border-style: solid;
-	    border-width: 2px;
-	    border-radius: 10px;
-	    border-color: $color-blue--mid;
-	    margin: 0 10px;
+		& .quicklink_item-button {
+			height: 100%;
+			height: $quicklinks-button-height;
+			margin: 0 10px;
+			margin-top: 25px;
+			float: left;
+			border-width: 2px;
+			border-style: solid;
+			border-radius: 10px;
+			border-color: $color-blue--mid;
+			background-color: $color-blue--mid;
+			background-size: cover;
+			text-align: center;
 
-	    & a {
-	      color: $color-green--light;
-	    }
-	  }
+			& a {
+				color: $color-green--light;
+			}
+		}
 		& a{
+			color: $color-white;
 			text-align: center;
 			text-transform: uppercase;
-			color: $color-white;
 		}
 
 		&:nth-child(1){
@@ -153,70 +153,70 @@
 			}
 		}
 
-		&:hover{ //HOVER FOR QUICKLINKS..........
+		&:hover{
 			& .quicklink_item {
-		    height: 0px;
+				height: 0px;
 			}
 			& .quicklink_title{
 				height: 320px;
-			}
+			} //HOVER FOR QUICKLINKS..........
 		}
 	}
 }
 
 .quicklink_item-button_a {
-  color: white;
-  &:hover{
-    & .quicklink_item-button {
-      background-color: $color-navy--light;
-      border-color: $color-navy--dark;
-      opacity: 0.75;
-      & .quicklink_button_left {
-        background-color: $color-navy--dark;
-      }
-    }
-  &:active{
-    & .quicklink_item-button {
-      opacity: 1;
-      border-width: 4px;
-    }
-  }
-  }
+	color: white;
+	&:hover{
+		& .quicklink_item-button {
+			border-color: $color-navy--dark;
+			background-color: $color-navy--light;
+			opacity: 0.75;
+			& .quicklink_button_left {
+				background-color: $color-navy--dark;
+			}
+		}
+	&:active{
+		& .quicklink_item-button {
+			border-width: 4px;
+			opacity: 1;
+		}
+	}
+	}
 }
 
 .quicklink_button {
-  text-align: left;
-  position: relative;
-  & p {
-    margin-top: 20px;
-    text-align: left;
-    font-size: 16px;
-    color: white;
-    text-transform: uppercase;
-    line-height: 20px;
-  }
-  & .fa {
-    color: white;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    margin-top: 10px;
-  }
+	position: relative;
+	text-align: left;
+	& p {
+		margin-top: 20px;
+		color: white;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	& .fa {
+		width: 50px;
+		margin-top: 10px;
+		color: white;
+		font-size: 30px;
+		text-align: center;
+	}
 }
 
 .quicklink_button_left {
-  width: 30%;
-  float: left;
-  display: inline;
-  background-color: $color-green--dark;
-  border-radius: 100%;
-  height: 80%;
-  padding: 10px;
-  margin: 4%;
+	display: inline;
+	width: 30%;
+	height: 80%;
+	margin: 4%;
+	padding: 10px;
+	float: left;
+	border-radius: 100%;
+	background-color: $color-green--dark;
 }
 
 .quicklink_button_right {
-  width: 60%;
-  float: right;
-  display: inline;
+	display: inline;
+	width: 60%;
+	float: right;
 }

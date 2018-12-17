@@ -1,7 +1,7 @@
 /******************
 *
 *
-*  Mixins'
+*	Mixins'
 *
 *
 ******************/
@@ -12,32 +12,32 @@
 
 // Media queries.
 @mixin media($break) {
- $value: map-get($breakpoint, $break);
- $xsmall: map-get($breakpoint, 'xsmall');
+	$value: map-get($breakpoint, $break);
+	$xsmall: map-get($breakpoint, 'xsmall');
 
-  @if $value < $xsmall {
-    @media (max-width: $value){
-      @content;
-    }
-  }//@if xxsmall
+	@if $value < $xsmall {
+		@media (max-width: $value){
+			@content;
+		}
+	}//@if xxsmall
 
-  @else {
-    @media (min-width: $value){
-      @content;
-    }
-  }//@if xsmall
+	@else {
+		@media (min-width: $value){
+			@content;
+		}
+	}//@if xsmall
 }
 
 @mixin full-width {
-  width: 100%;
-  float: none;
-  clear: both;
+	width: 100%;
+	float: none;
+	clear: both;
 }
 
 @mixin small-full {
-  @media (max-width: $breakpoint-xxsmall) {
-    @include full-width;
-  } // @media small
+	@media (max-width: $breakpoint-xxsmall) {
+		@include full-width;
+	} // @media small
 }
 
 @mixin gradient($color1, $color2) {
@@ -52,22 +52,22 @@
 ## ++ Unit transform
 ========================================================================== */
 /*
-    Used for making containers have width in percentages.
-    Usage: define elemnt width in px and the width of parent elemnt in px.
-    eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}
+		Used for making containers have width in percentages.
+		Usage: define elemnt width in px and the width of parent elemnt in px.
+		eg. .block{width:cp(512px, 1024px)} this will result in .block{width:50%;}
 */
 @function cp($target, $container) {
-  @return ($target / $container) * 100%;
+	@return ($target / $container) * 100%;
 }
 /*
-    Used for making px values convert to rem values
-    Usage: define font-size in px and it will convert to rems
-    eg. font-size: rem(14px);
+		Used for making px values convert to rem values
+		Usage: define font-size in px and it will convert to rems
+		eg. font-size: rem(14px);
 */
 @function rem($target, $context: $base-font-size) {
-  @if $target == 0 {
-    @return 0
-  }
-  @return $target / $context + 0rem;
+	@if $target == 0 {
+		@return 0
+	}
+	@return $target / $context + 0rem;
 }
 $base-font-size: 16px;

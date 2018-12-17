@@ -1,7 +1,7 @@
 /******************
 *
 *
-*  FONTS
+*	FONTS
 *
 *
 ******************/
@@ -9,13 +9,13 @@
 @import url('https://fonts.googleapis.com/css?family=Muli');
 
 @font-face {
-  font-family: 'HighTide';
-  src:  url('fonts/HighTide-Demo.ttf') format('truetype');
+	src:	url('fonts/HighTide-Demo.ttf') format('truetype');
+	font-family: 'HighTide';
 }
 
 @font-face {
-  font-family: 'Bariol Regular';
-  src:  url('fonts/Bariol_Regular.otf') format('opentype');
+	src:	url('fonts/Bariol_Regular.otf') format('opentype');
+	font-family: 'Bariol Regular';
 }
 
 /**** Styling: ****/
@@ -28,7 +28,7 @@ h4,
 h5,
 li,
 p {
-  font-family: 'Bariol Regular', sans-serif;
+	font-family: 'Bariol Regular', sans-serif;
 }
 
 h1,
@@ -36,129 +36,129 @@ h2,
 h3,
 h4,
 h5 {
-  text-transform: capitalize;
+	text-transform: capitalize;
 }
 
 .article-body {
 	& h2{
 		margin-bottom: 20px;
 	}
-  & ul {
-    list-style: disc;
-    & li {
-      margin-bottom: 30px;
-      color: $color-grey--dark;
-    }
-  }
-  & ol {
-    list-style-type: decimal;
-    list-style-position: outside;
-    padding-left: 10%;
-    & li {
-      margin-bottom: 30px;
-      color: $color-grey--dark;
-    }
-  }
+	& ul {
+		list-style: disc;
+		& li {
+			margin-bottom: 30px;
+			color: $color-grey--dark;
+		}
+	}
+	& ol {
+		padding-left: 10%;
+		list-style-position: outside;
+		list-style-type: decimal;
+		& li {
+			margin-bottom: 30px;
+			color: $color-grey--dark;
+		}
+	}
 }
 
 a {
-  font-size: 20px;
-  text-decoration: none;
-  color: $color-navy--dark;
+	color: $color-navy--dark;
+	font-size: 20px;
+	text-decoration: none;
 }
 
 h1 {
-  font-size: 22px;
-  color: $color-blue--mid;
+	color: $color-blue--mid;
+	font-size: 22px;
 }
 
 h2 {
-  font-size: 20px;
-  color: $color-blue--light;
+	color: $color-blue--light;
+	font-size: 20px;
 }
 
 h3 {
-  font-size: 18px;
-  color: $color-blue--light;
+	color: $color-blue--light;
+	font-size: 18px;
 }
 
 h4 {
-  font-size: 17px;
-  color: $color-blue--light;
+	color: $color-blue--light;
+	font-size: 17px;
 }
 
 strong {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 em {
-  font-style: italic;
+	font-style: italic;
 }
 
 blockquote {
-  font-weight: light;
-  font-style: italic;
+	font-style: italic;
+	font-weight: light;
 }
 
 .article-h1 {
+	margin-bottom: 32px;
+	color: $color-navy--dark;
+	font-size: 32px;
 	text-transform: uppercase;
-  margin-bottom: 32px;
-  font-size: 32px;
-  color: $color-navy--dark;
 }
 
 p {
-  margin-bottom: 32px;
-  font-size: 19px;
-  color: $color-navy--dark;
+	margin-bottom: 32px;
+	color: $color-navy--dark;
+	font-size: 19px;
 }
 
 .news_items {
-  & .item{
-    & a{
-      & h4{
-        color: $color-blue--mid;
-      }
-    }
-    &:hover {
-      & a{
-        h4 {
-          color: $color-navy--light;
-        }
-      }
-    }
-  }
+	& .item{
+		& a{
+			& h4{
+				color: $color-blue--mid;
+			}
+		}
+		&:hover {
+			& a{
+				h4 {
+					color: $color-navy--light;
+				}
+			}
+		}
+	}
 }
 
 .right_header_bottom {
-  & p {
-   color: $color-grey--light;
-   font-size: 16px;
- }
+	& p {
+	 color: $color-grey--light;
+	 font-size: 16px;
+	}
 }
 
 .left_header_bottom {
-  & p {
-    color: $color-grey--light;
-    font-size: 16px;
-  }
+	& p {
+		color: $color-grey--light;
+		font-size: 16px;
+	}
 }
 
 .article-body {
-  & p {
-    color: $color-grey--dark;
-    line-height: 1.4;
-    font-size: 17px;
-  }
+	& p {
+		color: $color-grey--dark;
+		font-size: 17px;
+		line-height: 1.4;
+	}
 }
 
 .cta-focus{
+	margin-right: 33px;
 	color: $color-yellow--mid;
 	font-family: "HighTide";
-	text-transform: capitalize;
 	font-size: 130px;
 	line-height: 0.4;
-	margin-right: 33px;
+	text-transform: capitalize;
 }
 
 .blue{

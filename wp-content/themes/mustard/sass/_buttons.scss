@@ -7,42 +7,42 @@
 ******************/
 
 button {
+	width: flex;
+	min-width: 237px;
+	height: 52px;
+	margin: 10px 0;
+	border-width: 0;
+	border-radius: 12px;
+	outline: 0;
+	background-color: $color-blue--light;
+	color: $color-white;
+	font-size: 21px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
 	cursor: pointer;
-  background-color: $color-blue--light;
-  height: 52px;
-  width: flex;
-  color: $color-white;
-  border-radius: 12px;
-  font-size: 21px;
-  text-transform: uppercase;
-  border-width: 0;
-  margin: 10px 0;
-  min-width: 237px;
-  text-align: center;
-  font-weight: 500;
-  outline: 0;
 	&::after{
-		height: 0%;
 		width: 100%;
+		height: 0%;
 		background-color: $color-navy--light;
 	}
-  &:hover {
+	&:hover {
+		opacity: 0.75;
 		&::after{
 			height: 100%;
 		}
-    opacity: 0.75;
-  }
-  &:active {
-    background-color: $color-navy--light;
-    border-width: 0px;
-    border-color: $color-navy--light;
-  }
-  & .icon {
-    text-align: right;
-    float: right;
-    width: 10px;
-    padding-right: 20px;
-  }
+	}
+	&:active {
+		border-width: 0px;
+		border-color: $color-navy--light;
+		background-color: $color-navy--light;
+	}
+	& .icon {
+		width: 10px;
+		padding-right: 20px;
+		float: right;
+		text-align: right;
+	}
 }
 
 .yellow-button{
