@@ -21,8 +21,15 @@ button {
   text-align: center;
   font-weight: 500;
   outline: 0;
+	&::after{
+		height: 0%;
+		width: 100%;
+		background-color: $color-navy--light;
+	}
   &:hover {
-    background-color: $color-navy--light;
+		&::after{
+			height: 100%;
+		}
     opacity: 0.75;
   }
   &:active {
