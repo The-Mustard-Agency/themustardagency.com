@@ -40,7 +40,7 @@ h5 {
 }
 
 .article-body {
-	& h2{
+	& h2 {
 		margin-bottom: 20px;
 	}
 	& ul {
@@ -114,14 +114,14 @@ p {
 }
 
 .news_items {
-	& .item{
-		& a{
-			& h4{
+	& .item {
+		& a {
+			& h4 {
 				color: $color-blue--mid;
 			}
 		}
 		&:hover {
-			& a{
+			& a {
 				h4 {
 					color: $color-navy--light;
 				}
@@ -152,7 +152,7 @@ p {
 	}
 }
 
-.cta-focus{
+.cta-focus {
 	margin-right: 33px;
 	color: $color-yellow--mid;
 	font-family: "HighTide";
@@ -161,6 +161,6 @@ p {
 	text-transform: capitalize;
 }
 
-.blue{
+.blue {
 	color: $color-blue--dark;
 }

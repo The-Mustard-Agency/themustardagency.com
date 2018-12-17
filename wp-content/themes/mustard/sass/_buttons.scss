@@ -21,7 +21,7 @@ button {
 	text-align: center;
 	text-transform: uppercase;
 	cursor: pointer;
-	&::after{
+	&::after {
 		width: 100%;
 		height: 0%;
 		background-color: $color-navy--light;

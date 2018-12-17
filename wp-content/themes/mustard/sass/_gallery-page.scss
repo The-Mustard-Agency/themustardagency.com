@@ -19,16 +19,16 @@
 		& li {
 			object-fit: cover;
 			margin-bottom: 15px;
-			& a{
+			& a {
 				& img {
 					width: 100%;
 					height: $gallery-column-height;
 					object-fit: cover;
 				}
 			}
-			&:hover{
-				& a{
-					& img{
+			&:hover {
+				& a {
+					& img {
 						opacity: 0.4;
 					}
 				}
