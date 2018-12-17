@@ -3755,7 +3755,7 @@ article { background-color: #EEEBEF; min-height: 50vh; height: auto; }
 
 .work_gallery_row { height: 411px; width: 100%; }
 
-.work_gallery_row_single { cursor: pointer; background-color: #1B3E54; background-size: cover; background-position: center; height: 411px; margin-right: 31px; margin-bottom: 31px; float: left; cursor: pointer; transition: height 2s; }
+.work_gallery_row_single { cursor: pointer; background-color: #1B3E54; background-size: cover; background-position: 50% 50%; height: 411px; margin-right: 31px; margin-bottom: 31px; float: left; position: relative; cursor: pointer; transition: all .4s ease-in-out; }
 
 @media (max-width: 599px) { .work_gallery_row_single { width: 100%; } }
 
@@ -3766,9 +3766,13 @@ article { background-color: #EEEBEF; min-height: 50vh; height: auto; }
 @media (min-width: 1200px) { .work_gallery_row_single { width: 31.8%; }
   .work_gallery_row_single:nth-child(3n) { margin-right: 0px; } }
 
-.work_gallery_row_single::after { height: 100%; width: 0%; display: block; background-color: #EEEBEF; transition: all 2s; }
+.work_gallery_row_single::before { height: 100%; width: 0%; display: -ms-flexbox; display: flex; position: absolute; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; content: " "; background-color: rgba(27, 62, 84, 0); color: #EEEBEF; transition: all .4s ease-in-out; }
 
-.work_gallery_row_single:hover::after { background-color: #1B3E54; content: attr(data-title); color: #EEEBEF; font-family: 'Bariol Regular'; font-size: 20px; height: 100%; width: 100%; display: -ms-flexbox; display: flex; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; }
+.work_gallery_row_single::after { top: 78%; left: 30px; height: 15%; width: 86%; padding-top: 20px; padding-left: 20px; position: absolute; display: block; content: attr(data-title); font-family: 'Bariol Regular'; font-size: 24px; font-weight: 600; background-color: #1B3E54; color: #EEEBEF; }
+
+.work_gallery_row_single:hover { background-position: 60% 50%; }
+
+.work_gallery_row_single:hover::before { background-color: rgba(27, 62, 84, 0.5); height: 100%; width: 100%; }
 
 /*  contact page  */
 .contact-header { height: 460px; width: 100%; background-size: cover; background-repeat: no-repeat; padding-top: 30px; }

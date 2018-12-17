@@ -250,13 +250,17 @@ $susy: (
 			cursor: pointer;
 			background-color: $color-blue--mid;
 			background-size: cover;
-			background-position: center;
+			background-position: 50% 50%;
 			height: 411px;
 			margin-right: 31px;
 			margin-bottom: 31px;
 			float: left;
+			position: relative;
 			cursor: pointer;
-			transition: height 2s;
+			-webkit-transition: all .4s ease-in-out;
+			-moz-transition: all .4s ease-in-out;
+			-o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
 			@include media('xxsmall'){
 				width: 100%;
 			}
@@ -272,25 +276,43 @@ $susy: (
 					margin-right: 0px;
 				}
 			}
-			&::after{
+			&::before{
 				height: 100%;
 				width: 0%;
+				display: flex;
+				position: absolute;
+				justify-content: center;
+				align-items: center;
+				content: " ";
+				background-color: rgba(27,62,84,0.0);
+				color: $color-white;
+				-webkit-transition: all .4s ease-in-out;
+				-moz-transition: all .4s ease-in-out;
+				-o-transition: all .4s ease-in-out;
+				transition: all .4s ease-in-out;
+			}
+			&::after{
+				top: 78%;
+				left: 30px;
+				height: 15%;
+				width: 86%;
+				padding-top: 20px;
+				padding-left: 20px;
+				position: absolute;
 				display: block;
-				background-color: $color-white;
-				transition: all 2s;
+				content: attr(data-title);
+				font-family: 'Bariol Regular';
+				font-size: 24px;
+				font-weight: 600;
+				background-color: $color-blue--mid;
+				color: $color-white;
 			}
 			&:hover{
-				&::after{
-					background-color: $color-blue--mid;
-					content: attr(data-title);
-					color: $color-white;
-					font-family: 'Bariol Regular';
-					font-size: 20px;
+				background-position: 60% 50%;
+				&::before{
+					background-color: rgba(27,62,84,0.5);
 					height: 100%;
 					width: 100%;
-					display: flex;
-				  justify-content: center;
-				  align-items: center;
 				}
 			}
 		}
