@@ -1,14 +1,11 @@
 <div class="findoutmore">
 	<div class="findoutmore_inner">
 		<div class="findoutmore_inner_left">
-			<h2>School Prospectus Design</h2>
-			<p>
-				Our talent lies in truly understanding the individuality of your school, and then producing innovative ways to communicate this to parents via photography, typography, and design. Delivering a fantastic final school prospectus you will be proud of.
-			</p>
-			<button class="yellow-button">find out more</button>
+			<h2>{{ post.get_field('ib1_title') }}</h2>
+			<p>{{ post.get_field('ib1_text') }}</p>
+			<button class="yellow-button">{{ post.get_field('ib2_button_text') }}</button>
 		</div>
-		<div class="findoutmore_inner_right" data-bg="{{ site.theme.link }}/images/temp.png">
-
+		<div class="findoutmore_inner_right" data-bg="{{ post.get_field('ib2_photo_image')}}">
 		</div>
 	</div>
 </div>

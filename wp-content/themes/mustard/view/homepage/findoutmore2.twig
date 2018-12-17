@@ -1,13 +1,11 @@
 <div class="findoutmore">
 	<div class="findoutmore_inner">
 		<div class="findoutmore_inner_left">
-			<h2>extraordinary SCHOOL PHOTOGRAPHY</h2>
-			<p>Our school photography experts capture your school’s spirit from beautiful school grounds to happy students. Our award-winning, experienced school photographers provide imaginative and inspirational images which
-will strengthen your USP.</p>
-			<button class="yellow-button">book your photoshoot today</button>
+			<h2>{{ post.get_field('ib2_title') }}</h2>
+			<p>{{ post.get_field('ib2_text') }}</p>
+			<button class="yellow-button">{{ post.get_field('ib2_button_text') }}</button>
 		</div>
-		<div class="findoutmore_inner_right" data-bg="{{ site.theme.link }}/images/temp.png">
-
+		<div class="findoutmore_inner_right" data-bg="{{ post.get_field('ib2_photo_image')}}">
 		</div>
 	</div>
 </div>
