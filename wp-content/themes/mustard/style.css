@@ -4419,7 +4419,7 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 @media (min-width: 1600px) { .quicklinks_inner .quicklink_single { width: 20% !important; height: 320px; } }
 
-.quicklinks_inner .quicklink_single .quicklink_item { background-size: cover; opacity: 1; transition: height 2s; }
+.quicklinks_inner .quicklink_single .quicklink_item { background-size: cover; opacity: 1; transition: height .3s; }
 
 @media (max-width: 599px) { .quicklinks_inner .quicklink_single .quicklink_item { height: 178.5px; } }
 
@@ -4431,7 +4431,7 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 .quicklinks_inner .quicklink_single .quicklink_item:hover { opacity: 1; }
 
-.quicklinks_inner .quicklink_single .quicklink_title { width: 100%; transition: height 2s; }
+.quicklinks_inner .quicklink_single .quicklink_title { width: 100%; transition: height .3s; }
 
 @media (max-width: 599px) { .quicklinks_inner .quicklink_single .quicklink_title { height: 67.19px; } }
 
@@ -4449,23 +4449,23 @@ button .icon { text-align: right; float: right; width: 10px; padding-right: 20px
 
 .quicklinks_inner .quicklink_single a { text-align: center; text-transform: uppercase; color: #EEEBEF; }
 
-.quicklinks_inner .quicklink_single:nth-child(1) { border-bottom: 0px; transition: border-bottom 1s; }
+.quicklinks_inner .quicklink_single:nth-child(1) { border-bottom: 0px; transition: border-bottom .3s; }
 
 .quicklinks_inner .quicklink_single:nth-child(1):hover { border-bottom: 9px solid #E10586; }
 
-.quicklinks_inner .quicklink_single:nth-child(2) { border-bottom: 0px; transition: border-bottom 1s; }
+.quicklinks_inner .quicklink_single:nth-child(2) { border-bottom: 0px; transition: border-bottom .3s; }
 
 .quicklinks_inner .quicklink_single:nth-child(2):hover { border-bottom: 9px solid #E0A812; }
 
-.quicklinks_inner .quicklink_single:nth-child(3) { border-bottom: 0px; transition: border-bottom 1s; }
+.quicklinks_inner .quicklink_single:nth-child(3) { border-bottom: 0px; transition: border-bottom .3s; }
 
 .quicklinks_inner .quicklink_single:nth-child(3):hover { border-bottom: 9px solid #07789B; }
 
-.quicklinks_inner .quicklink_single:nth-child(4) { border-bottom: 0px; transition: border-bottom 1s; }
+.quicklinks_inner .quicklink_single:nth-child(4) { border-bottom: 0px; transition: border-bottom .3s; }
 
 .quicklinks_inner .quicklink_single:nth-child(4):hover { border-bottom: 9px solid #5E727E; }
 
-.quicklinks_inner .quicklink_single:nth-child(5) { border-bottom: 0px; transition: border-bottom 1s; }
+.quicklinks_inner .quicklink_single:nth-child(5) { border-bottom: 0px; transition: border-bottom .3s; }
 
 .quicklinks_inner .quicklink_single:nth-child(5):hover { border-bottom: 9px solid #E0A812; }
 

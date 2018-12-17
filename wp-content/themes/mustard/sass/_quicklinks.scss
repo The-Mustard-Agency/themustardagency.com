@@ -53,7 +53,7 @@
 	  & .quicklink_item {
 	    background-size: cover;
 	    opacity: 1;
-			transition: height 2s;
+			transition: height .3s;
 			@include media('xxsmall'){
 				height: 178.5px;
 			}
@@ -72,7 +72,7 @@
 	  }
 		& .quicklink_title{
 			width: 100%;
-			transition: height 2s;
+			transition: height .3s;
 			@include media('xxsmall'){
 				height: 67.19px;
 			}
@@ -119,35 +119,35 @@
 
 		&:nth-child(1){
 			border-bottom: 0px;
-			transition: border-bottom 1s;
+			transition: border-bottom .3s;
 			&:hover{
 			border-bottom: 9px solid $color-pink--mid;
 			}
 		}
 		&:nth-child(2){
 			border-bottom: 0px;
-			transition: border-bottom 1s;
+			transition: border-bottom .3s;
 			&:hover{
 			border-bottom: 9px solid $color-yellow--mid;
 			}
 		}
 		&:nth-child(3){
 			border-bottom: 0px;
-			transition: border-bottom 1s;
+			transition: border-bottom .3s;
 			&:hover{
 			border-bottom: 9px solid $color-blue--light;
 			}
 		}
 		&:nth-child(4){
 			border-bottom: 0px;
-			transition: border-bottom 1s;
+			transition: border-bottom .3s;
 			&:hover{
 			border-bottom: 9px solid $color-blue--grey;
 			}
 		}
 		&:nth-child(5){
 			border-bottom: 0px;
-			transition: border-bottom 1s;
+			transition: border-bottom .3s;
 			&:hover{
 			border-bottom: 9px solid $color-yellow--mid;
 			}
