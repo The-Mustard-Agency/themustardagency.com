@@ -351,12 +351,12 @@
 						-webkit-transform-origin: 50% -50%;
 						-ms-transform-origin: 50% -50%;
 						-webkit-transform: rotateX(-90deg);
+						transform: rotateX(-90deg);
 						display: flex;
 						align-items: center;
 						justify-content: center;
 						width: 100%;
 						height: 100%;
-						transform: rotateX(-90deg);
 						transform-origin: 50% -50%;
 						background-color: $color-blue--mid;
 						opacity: 0;
@@ -371,33 +371,73 @@
 							text-align: center;
 						}
 					}
-				}
+				}//tile
 				&:nth-child(2) {
-					& figcaption {
+					figcaption {
+						-webkit-transform: rotateX(0deg);
+						transform: rotateX(0deg);
+						opacity: 1;
 						background-color: $color-blue--light;
+						&:hover {
+							opacity: 0;
+							-webkit-transform: rotateX(-90deg);
+							transform: rotateX(-90deg);
+						}
 					}
 				}
 				&:nth-child(4) {
-					& figcaption {
+					figcaption {
+						-webkit-transform: rotateX(0deg);
+						transform: rotateX(0deg);
+						opacity: 1;
 						background-color: $color-yellow--mid;
+						&:hover {
+							opacity: 0;
+							-webkit-transform: rotateX(-90deg);
+							transform: rotateX(-90deg);
+						}
 					}
 				}
 				&:nth-child(6) {
-					& figcaption {
+					figcaption {
+						-webkit-transform: rotateX(0deg);
+						transform: rotateX(0deg);
+						opacity: 1;
 						background-color: $color-pink--mid;
+						&:hover {
+							opacity: 0;
+							-webkit-transform: rotateX(-90deg);
+							transform: rotateX(-90deg);
+						}
 					}
 				}
 				&:nth-child(8) {
-					& figcaption {
+					figcaption {
+						-webkit-transform: rotateX(0deg);
+						transform: rotateX(0deg);
+						opacity: 1;
 						background-color: $color-grey--mid;
+						&:hover {
+							opacity: 0;
+							-webkit-transform: rotateX(-90deg);
+							transform: rotateX(-90deg);
+						}
 					}
 				}
 				&:nth-child(10) {
-					& figcaption {
+					figcaption {
+						-webkit-transform: rotateX(0deg);
+						transform: rotateX(0deg);
+						opacity: 1;
 						background-color: $color-blue--mid;
+						&:hover {
+							opacity: 0;
+							-webkit-transform: rotateX(-90deg);
+							transform: rotateX(-90deg);
+						}
 					}
 				}
-			}
+			}//_tile
 		}
 	}
 }

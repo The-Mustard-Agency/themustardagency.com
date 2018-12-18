@@ -8,30 +8,6 @@
 *
 ******************/
 
-
-/* ==== Colour settings ====*/
-
-/* Please use proper naming conventions for future fonts and colour variables, e.g.
-
-	$color-red-dark
-	$color-red-mid #never use just 'red'. 3 exceptions being. $color-white, $color-black, $color-transparent
-	$color-red-light
-	$color-red-light--alt # if you have a secondary light red, i know this can be confusing, work with it, see what happens.
-	$color-brand
-	$color-brand--accent
-	$color-background
-	$color-background--alt
-
-Same for fonts:
-
-	$font-base #Always prefix with 'font'
-	$font-body
-	$font-feature
-
-if in doubt, theres a pretty good ref guide here:
-http://domain7.github.io/dev-wiki/css/
-*/
-
 $color-blue--grey:#5E727E; //Grey/Blue.
 $color-blue--light:#07789B; //Mustard Light Blue.
 $color-blue--mid:#1B3E54; //Mustard Blue.
@@ -43,7 +19,6 @@ $color-yellow--dark:#E0A812; //Yellow.
 $color-white:#EEEBEF; //Mustard White.
 $color-grey--mid:#5E727E; //Grey.
 $color-grey--light:#A2AEB6; //Light Grey.
-
 
 $color-blue--lighter:#e8f6ff;
 $color-navy--light:#2475bc;
@@ -62,12 +37,6 @@ $color-primary--light: $color-blue--light;
 $color-alt: $color-green--mid;
 
 
-/* Breakpoints:
-* to use:
-*.some-module {
-*   padding: 10px;
-*   @media (min-width: breakpoint(large)) { ...
-*/
 $breakpoint: (
   xxlarge: 1600px,
   xlarge: 1400px,
@@ -148,13 +117,7 @@ $sidebar-text-hover: $color-blue--lighter;
 
 /* ------------
 
-
-
 	General Page
-
-
-
-
 
 	------------ */
 
