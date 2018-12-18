@@ -335,6 +335,7 @@
 				width: 20%;
 				height: 318px;
 				float: left;
+				overflow: hidden;
 				& .tile {
 					width: 100%;
 					height: 318px;
@@ -378,7 +379,11 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-blue--light;
+						transition: all .3s;
+						-webkit-transform-style: preserve-3d;
+
 						&:hover {
+							-webkit-backface-visibility: hidden;
 							opacity: 0;
 							-webkit-transform: rotateX(-90deg);
 							transform: rotateX(-90deg);
@@ -391,7 +396,11 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-yellow--mid;
+						transition: all .3s;
+						-webkit-transform-style: preserve-3d;
+
 						&:hover {
+							-webkit-backface-visibility: hidden;
 							opacity: 0;
 							-webkit-transform: rotateX(-90deg);
 							transform: rotateX(-90deg);
@@ -404,7 +413,11 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-pink--mid;
+						transition: all .3s;
+						-webkit-transform-style: preserve-3d;
+
 						&:hover {
+							-webkit-backface-visibility: hidden;
 							opacity: 0;
 							-webkit-transform: rotateX(-90deg);
 							transform: rotateX(-90deg);
@@ -417,7 +430,11 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-grey--mid;
+						transition: all .3s;
+						-webkit-transform-style: preserve-3d;
+
 						&:hover {
+							-webkit-backface-visibility: hidden;
 							opacity: 0;
 							-webkit-transform: rotateX(-90deg);
 							transform: rotateX(-90deg);
@@ -430,7 +447,11 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-blue--mid;
+						transition: all .3s;
+						-webkit-transform-style: preserve-3d;
+
 						&:hover {
+							-webkit-backface-visibility: hidden;
 							opacity: 0;
 							-webkit-transform: rotateX(-90deg);
 							transform: rotateX(-90deg);
