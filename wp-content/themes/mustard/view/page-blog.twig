@@ -10,7 +10,11 @@
 					<div class="blog-container">
 						{% for blogpost in blog %}
 							<div onclick="window.location = '{{ blogpost.link }}';" class="blog-container_single all" style="display: block;"  data-title="{{ blogpost.title }}">
+								{% if blogpost.thumbnail.src %}
 								<div class="blog_img" alt="{{ blogpost.title }}" data-bg="{{ blogpost.thumbnail.src }}" ></div>
+								{% else %}
+								<div class="blog_img" alt="{{ blogpost.title }}" data-bg="{{ site.theme.link }}/images/blog_temp.png" ></div>
+								{% endif %}
 								<h3>{{ blogpost.title }}</h3>
 								<hr />
 							</div>
