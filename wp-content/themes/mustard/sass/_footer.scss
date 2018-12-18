@@ -25,7 +25,7 @@
 		width: $site-width;
 		height: 100%;
 		margin: 0 auto;
-		padding-top: 57px;
+		padding-top: 35px;
 		overflow: hidden;
 		@include media('xxsmall') {
 			width: 100%;
@@ -172,11 +172,19 @@
 	& b {
 		font-weight: 700;
 	}
+	& a{
+		&:hover{
+			color: $color-pink--mid;
+		}
+	}
 }
 
 .footer_email {
 	color: $color-grey--dark;
 	font-size: 18px;
+	&:hover{
+		color: $color-pink--mid;
+	}
 }
 
 .footer_copywright {
@@ -243,6 +251,10 @@
 				color: $color-grey--light;
 				font-size: 12px;
 				text-transform: uppercase;
+				cursor: pointer;
+				&:hover{
+					color: $color-yellow--mid;
+				}
 			}
 		}
 	}

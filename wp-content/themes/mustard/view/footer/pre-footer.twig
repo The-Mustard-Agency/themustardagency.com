@@ -1,13 +1,12 @@
 <div class="pre-footer-left">
   <h2>Connect with us</h2>
   <p>{{ options.school_address }}</p>
-  <p class="footer_phone">Telephone: {{ options.school_phone }}</p>
+  <p class="footer_phone">Telephone: <a href="tel:{{ options.school_phone }}">{{ options.school_phone }}</a></p>
   <p><a href="mailto:{{ options.school_email }}" class="footer_email">{{ options.school_email }}</a></p>
 </div>
 <div class="pre-footer-center">
-	<h2>About Mustard</h2>
-	<p>The Mustard Agency is a creative branding and design agency with expertise in marketing and all things digital. Here at Mustard we don’t leave anything to chance. To deliver the very best for your business, our teams are made up of the very best. We love what
-we do and work hard to ensure that you love what we do, too!</p>
+	<h2>{{ options.text_title }}</h2>
+	<p>{{ options.main_text }}</p>
 </div>
 <div class="pre-footer-right">
 	<button class="hvr-bounce-to-top">Contact us</button>
