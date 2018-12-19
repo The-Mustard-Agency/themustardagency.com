@@ -7,6 +7,7 @@
 				{% include "partial/content_headers.twig" %}
         <section class="article-content">
 
+					{% if post.school_name %}
 					<div class="client-deets">
 						<div class="logo" data-bg="{{ post.get_field('school_logo') }}">
 						</div>
@@ -18,6 +19,8 @@
 							</div>
 						</div>
 					</div>
+					{% endif %}
+
 					<div class="main-section">
 						<h1 class="article-h1">{{ post.title }}</h1>
 	          <div class="article-body">
