@@ -1,6 +1,6 @@
 {
     "logo_url": "http://local.themustardagency.com/wp-content/themes/mustard/images/logo.png",
-    "message" : "Where do you want to start?",
+    "message" : "Where to start?",
     "bricks" : [
         {
             "label"     :   "Site-Wide",

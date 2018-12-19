@@ -158,6 +158,15 @@
 .footer-contain {
 	width: $site-width;
 	margin: 0 auto;
+	@include media('xxsmall') {
+		width: 100%;
+	}
+	@include media('xsmall') {
+		width: 100%;
+	}
+	@include media('xxlarge') {
+		width: $site-width;
+	}
 }
 
 .madeby {

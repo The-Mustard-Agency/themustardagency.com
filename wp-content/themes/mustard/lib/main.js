@@ -28,29 +28,6 @@ function fire_quicklinks() {
 
 }
 
-
-
-//open all link in content in a new tab.
-/*
-var mainContent = document.getElementById('articleBody').getElementsByTagName('a');
-for (var i = 0; i < mainContent.length; i++) {
-    var elem = mainContent[i]
-		var point = elem.href;
-		var strip = point.includes("themustardagency.com");
-		var stripPdf = point.includes("pdf");
-
-		if( strip != true ){
-			elem.target = '_blank';
-		} else if ( strip == true && stripPdf == true){
-			elem.target = '_blank';
-		} else {
-
-		}
-}
-*/
-
-
-
 //hide_popup
 
 document.cookie = "visited=true; path=/;";

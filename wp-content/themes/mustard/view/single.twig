@@ -7,32 +7,32 @@
 				{% include "partial/content_headers.twig" %}
         <section class="article-content">
 
-          <h1 class="article-h1">{{ post.title }}</h1>
-          <div class="article-body">
-            {{post.content}}
-          </div>
+					<div class="client-deets">
+						<div class="logo" data-bg="{{ post.get_field('school_logo') }}">
+						</div>
+						<h2>{{ post.school_name }}</h2>
+						<p>{% for terms in post.terms %}{{ terms }}, {% endfor %}</p>
+						<div style="width: 100%;">
+							<div style="text-align:center;">
+								<button class="yellow-button hvr-bounce-to-top">Visit website</button>
+							</div>
+						</div>
+					</div>
+					<div class="main-section">
+						<h1 class="article-h1">{{ post.title }}</h1>
+	          <div class="article-body">
+	            {{post.content}}
+	          </div>
+					</div>
 
-          {% for items in post.get_field('document_lists') %}
-            <strong>{{ items.doc_list_title }}</strong>
-            {% for item in items.document_list %}
-              <div class="item">
-                <a href="{{ item.doc_link }}" target="_blank">
-                  <h4>{{ item.doc_name }}</h4>
-                </a>
-              </div>
-            {% endfor %}
-          {% endfor %}
-
-					<button class="hvr-bounce-to-top" lable="back_btn" onclick="goBack()">Go Back</button>
-
-
-        </section>
+				</section>
       </article>
-      <script>
-        function goBack() {
-          window.history.back();
-        }
-      </script>
+			<div class="work-gallery">
+				{% for image in post.get_field('work_images') %}
+					<div class="work-gallery-single" data-bg="{{ image.work_image }}"></div>
+				{% endfor %}
+			</div>
+
     </div>
   </div>
   <!-- /content-wrapper -->
