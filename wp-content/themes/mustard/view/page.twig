@@ -19,12 +19,13 @@
 		</div>
 	{% endfor %}
 </div>
-<section class="article-content">
-
-	<div class="article-body">
-		{{ post.content }}
-	</div>
-</section>
-		</article>
+{% if post.content %}
+	<section class="article-content">
+		<div class="article-body">
+			{{ post.content }}
+		</div>
+	</section>
+{% endif %}
+</article>
 	</div><!-- /content-wrapper -->
 {% endblock %}
