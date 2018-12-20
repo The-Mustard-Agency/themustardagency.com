@@ -253,10 +253,10 @@ $susy: (
 			background-position: 50% 50%;
 			background-size: cover;
 			cursor: pointer;
-			-webkit-transition: all .4s ease-in-out;
-			-moz-transition: all .4s ease-in-out;
-			-o-transition: all .4s ease-in-out;
-			transition: all .4s ease-in-out;
+			-webkit-transition: all .3s ease-in-out;
+			-moz-transition: all .3s ease-in-out;
+			-o-transition: all .3s ease-in-out;
+			transition: all .3s ease-in-out;
 			@include media('xxsmall') {
 				width: 100%;
 			}
@@ -267,10 +267,7 @@ $susy: (
 				width: 47%;
 			}
 			@include media('large') {
-				width: 31.8%;
-				&:nth-child(3n){
-					margin-right: 0px;
-				}
+				width: 30.8%;
 			}
 			&::before {
 				display: flex;
@@ -282,10 +279,10 @@ $susy: (
 				background-color: rgba(27,62,84,0.0);
 				color: $color-white;
 				content: " ";
-				-webkit-transition: all .4s ease-in-out;
-				-moz-transition: all .4s ease-in-out;
-				-o-transition: all .4s ease-in-out;
-				transition: all .4s ease-in-out;
+				-webkit-transition: all .3s ease-in-out;
+				-moz-transition: all .3s ease-in-out;
+				-o-transition: all .3s ease-in-out;
+				transition: all .3s ease-in-out;
 			}
 			&::after {
 				display: block;
@@ -311,6 +308,14 @@ $susy: (
 					background-color: rgba(27,62,84,0.5);
 				}
 			}
+		}
+		 .hidden{
+			width: 0px;
+			height: 0px;
+			opacity: 0!important;
+			margin-right: 0px;
+			margin-bottom: 0px;
+
 		}
 	}
 }
@@ -418,7 +423,7 @@ $susy: (
 	margin-bottom: 31px;
 	padding: 20px;
 	padding-bottom: 15px;
-	border: 2px $color-yellow--mid solid;
+	border: 2px $color-blue--mid solid;
 	border-radius: 7px;
 	background-color: $color-white;
 	& p {

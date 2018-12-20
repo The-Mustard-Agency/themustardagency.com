@@ -53,7 +53,7 @@
 					<div class="work_gallery">
 						<div class="work_gallery_row">
 							{% for job in work %}
-							<div alt="{{ job.title }}" onclick=" window.location = '{{ job.link }}';" class="work_gallery_row_single all {% for thing in job.terms %}{{ thing.name }}{% endfor %}" style="display: block;" data-bg="{{ job.thumbnail.src }}" data-title="{{ job.title }}"></div>
+							<div alt="{{ job.title }}" onclick=" window.location = '{{ job.link }}';" class="work_gallery_row_single all {% for thing in job.terms %}{{ thing.name }}{% endfor %}"  data-bg="{{ job.thumbnail.src }}" data-title="{{ job.title }}"></div>
 							{% endfor %}
 						</div>
 					</div>
@@ -66,6 +66,7 @@
 
 <script>
 ScrollReveal().reveal('.all');
+ScrollReveal().reveal('.filter', { delay: 2000 });
 
 //adding filters:
 function doFilterService(whattohide){
@@ -76,7 +77,7 @@ function doFilterService(whattohide){
 	var i;
 	var j;
 	var k;
-
+	ScrollReveal().reveal('.all', { delay: 500 });
 	var allButtons = document.getElementsByClassName("filter");
 	for (k = 0; k < allButtons.length; k++) {
 				allButtons[k].style.color = "#565656";
@@ -86,13 +87,15 @@ function doFilterService(whattohide){
 	getBtn.style.color = "#E10586";
 
 	for (i = 0; i < all.length; i++) {
-			if(all[i].style.display == "block"){
-				all[i].style.display = "none";
+			if(all[i].classList.contains("all")){
+				all[i].classList.add("hidden");
 			}
+
+
 	}
 	for (j = 0; j < x.length; j++) {
-			if(x[j].style.display == "none"){
-				x[j].style.display = "block";
+			if(x[j].classList.contains("hidden")){
+				x[j].classList.remove("hidden");
 			}
 	}
 }
@@ -105,7 +108,7 @@ function doFilterSector(whattohide){
 	var i;
 	var j;
 	var k;
-
+	ScrollReveal().reveal('.all', { delay: 500 });
 	var allButtons = document.getElementsByClassName("filter");
 	for (k = 0; k < allButtons.length; k++) {
 				allButtons[k].style.color = "#565656";
@@ -115,13 +118,13 @@ function doFilterSector(whattohide){
 	getBtn.style.color = "#E10586";
 
 	for (i = 0; i < all.length; i++) {
-			if(all[i].style.display == "block"){
-				all[i].style.display = "none";
+			if(all[i].classList.contains("all")){
+				all[i].classList.add("hidden");
 			}
 	}
 	for (j = 0; j < x.length; j++) {
-			if(x[j].style.display == "none"){
-				x[j].style.display = "block";
+			if(x[j].classList.contains("hidden")){
+				x[j].classList.remove("hidden");
 			}
 	}
 }
