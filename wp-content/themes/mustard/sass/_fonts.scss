@@ -18,6 +18,11 @@
 	font-family: 'Bariol Regular';
 }
 
+@font-face {
+	src:	url('fonts/dripicons-v2.ttf') format('opentype');
+	font-family: 'DripIcons';
+}
+
 /**** Styling: ****/
 
 a,
@@ -42,6 +47,10 @@ h5 {
 .article-body {
 	& h2 {
 		margin-bottom: 20px;
+	}
+	& p{
+		font-size: 20.4px;
+		line-height: 1.2;
 	}
 	& ul {
 		list-style: disc;
@@ -147,8 +156,8 @@ p {
 .article-body {
 	& p {
 		color: $color-grey--dark;
-		font-size: 17px;
-		line-height: 1.4;
+		font-size: 20.4px;
+		line-height: 1.2;
 	}
 }
 

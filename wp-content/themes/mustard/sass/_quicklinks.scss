@@ -85,12 +85,23 @@
 			@include media('xxlarge'){
 				height: 67.19px;
 			}
-			& a{
+			& a {
 				display: flex;
 				align-items: center;
 				justify-content: center;
 				height: 100%;
+				margin-top: 0px;
 				font-size: 24px;
+			}
+			& h2 {
+				position: absolute;
+				font-family: 'DripIcons';
+				color: $color-yellow--mid;
+				text-align: center;
+				margin-top: 0px;
+				font-size: 0px;
+				opacity: 0;
+				transition: all .3s;
 			}
 		}
 		& .quicklink_item-button {
@@ -157,6 +168,15 @@
 			}
 			& .quicklink_title{
 				height: 320px;
+				& a{
+					padding-top: 80px;
+				}
+				& h2{
+					margin-top: 30px;
+					margin-left: 5%;
+					font-size: 150px;
+					opacity: 1;
+				}
 			} //HOVER FOR QUICKLINKS..........
 		}
 	}
