@@ -10,25 +10,17 @@
                     "label" :   "Main Menu",
                     "url"   :   "nav-menus.php"
                 },
-                {
-                    "label" :   "School Info",
-                    "url"   :   "admin.php?page=theme-general-settings"
+								{
+                    "label" :   "global cta",
+                    "url"   :   "admin.php?page=theme-g-cta-settings"
                 },
-                {
-                    "label" :   "New logo",
-                    "url"   :   "admin.php?page=theme-general-settings"
+								{
+                    "label" :   "content tiles",
+                    "url"   :   "admin.php?page=theme-tiles-settings"
                 },
-                {
-                    "label" :   "Upload images or document",
-                    "url"   :   "upload.php"
-                },
-                {
-                    "label" :   "Edit Users",
-                    "url"   :   "users.php"
-                },
-                {
-                    "label" :   "Add New Users",
-                    "url"   :   "user-new.php"
+								{
+                    "label" :   "Testimonials",
+                    "url"   :   "admin.php?page=theme-testimonial-settings"
                 }
             ]
         },
@@ -49,7 +41,12 @@
                 {
                     "label" :   "Manage General Pages",
                     "url"   :   "admin.php?page=acf-options-homepage#acf-highlights"
+                },
+								{
+                    "label" :   "Portfolio Pages",
+                    "url"   :   "edit.php?post_type=work"
                 }
+
             ]
         },
         {
@@ -59,23 +56,9 @@
                 {
                     "label" :   "Manage News Posts",
                     "url"   :   "edit.php"
-                },
-                {
-                    "label" :   "Manage Events",
-                    "url"   :   "edit.php?post_type=ai1ec"
                 }
             ]
         },
-        {
-            "label"     :   "Help, Etc.",
-            "icon"      :   "fa-ambulance",
-            "links"     :   [
-                {
-                    "label" :   "Mustard CMS Manuel",
-                    "url"   :   "http://helpwith.mustardwebsites.com"
-                }
-            ]
-        }
     ]
 
 }
