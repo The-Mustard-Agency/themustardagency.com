@@ -1,8 +1,8 @@
 <div id="ctaPin" class="cta_one">
 	<div class="cta_one_inner">
-		<h2>looking to build an exceptional<br /> <span class="cta-focus">Responsive</span>  website?</h2>
+		{{ post.get_field('cta_1_text') }}
 	</div>
 	<div class="cta_one_inner">
-		<button class="hvr-bounce-to-top">explore</button>
+		<button class="hvr-bounce-to-top" onclick="window.location='{{ post.get_field('cta_1_button__link') }}';">{{ post.get_field('cta_1_button_text') }}</button>
 	</div>
 </div>

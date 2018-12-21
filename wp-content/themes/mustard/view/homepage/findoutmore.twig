@@ -3,7 +3,7 @@
 		<div class="findoutmore_inner_left">
 			<h2>{{ post.get_field('ib1_title') }}</h2>
 			<p>{{ post.get_field('ib1_text') }}</p>
-			<button class="yellow-button hvr-bounce-to-top">{{ post.get_field('ib1_button_text') }}</button>
+			<button class="yellow-button hvr-bounce-to-top" onclick="window.location='{{ post.get_field('ib1_button_link') }}';">{{ post.get_field('ib1_button_text') }}</button>
 		</div>
 		<div class="findoutmore_inner_right" data-bg="{{ post.get_field('ib1_photo_image')}}">
 		</div>
