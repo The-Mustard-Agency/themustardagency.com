@@ -4,33 +4,31 @@
 	<div id="postBody" class="content-wrapper">
 		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
 				{% include "partial/content_headers.twig" %}
-<div class="mustard">
-	{% for service in post.get_field('box_reapeater') %}
-		<div class="mustard_block" style="background-color:{{ service.box_background_color }};">
-			<div class="mustard_block_inner">
-				<div class="mustard_block_inner_left" data-bg="{{ service.box_side_image }}">
-				</div>
-				<div class="mustard_block_inner_right">
-					<h2>{{ service.box_title }}</h2>
-					<p>{{ service.box_the_text }}</p>
-					<button class="hvr-bounce-to-top" onclick="window.location='{{ service.box_link }}';">see more</button>
-				</div>
+			<div class="mustard">
+				{% for service in post.get_field('box_reapeater') %}
+					<div class="mustard_block" style="background-color:{{ service.box_background_color }};">
+						<div class="mustard_block_inner">
+							<div class="mustard_block_inner_left" data-bg="{{ service.box_side_image }}"></div>
+							<div class="mustard_block_inner_right">
+								<h2>{{ service.box_title }}</h2>
+								<p>{{ service.box_the_text }}</p>
+								<button class="hvr-bounce-to-top" onclick="window.location='{{ service.box_link }}';">see more</button>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
 			</div>
-		</div>
-	{% endfor %}
-</div>
-{% if post.content %}
-	<section class="article-content">
-		<div class="article-body">
-			{{ post.content }}
-		</div>
-	</section>
-{% endif %}
-</article>
+			{% if post.content %}
+				<section class="article-content">
+					<div class="article-body">
+						{{ post.content }}
+					</div>
+				</section>
+			{% endif %}
+		</article>
 	</div><!-- /content-wrapper -->
 
 	<script>
-ScrollReveal().reveal('.vc_grid-item');
+		ScrollReveal().reveal('.vc_grid-item');
 	</script>
-
 {% endblock %}
