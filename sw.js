@@ -1,10 +1,10 @@
 var cacheName = 'cache-this-__VERSION__';
 
 var requiredCacheFiles = [
-  'https://staging.mustardwebsites.co.uk/newbarnschool.co.uk/wp-content/themes/newbarnschool/images/logo.png',
-  'https://staging.mustardwebsites.co.uk/newbarnschool.co.uk/index.js',
-  'https://staging.mustardwebsites.co.uk/newbarnschool.co.uk/sw.js',
-  'https://staging.mustardwebsites.co.uk/newbarnschool.co.uk/wp-content/themes/newbarnschool/offline/offline.html'
+  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/images/logo.png',
+  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/index.js',
+  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/sw.js',
+  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/offline/offline.html'
 ];
 
 self.addEventListener('fetch', function(e){
@@ -39,7 +39,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
       fetch(event.request).catch(function(error) {
         console.log('Fetch failed; returning offline page instead.', error);
-        return caches.match('https://staging.mustardwebsites.co.uk/newbarnschool.co.uk/wp-content/themes/newbarnschool/offline/offline.html');
+        return caches.match('https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/offline/offline.html');
       })
     );
   }
