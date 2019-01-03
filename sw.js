@@ -1,10 +1,10 @@
 var cacheName = 'cache';
 
 var requiredCacheFiles = [
-  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/images/logo.png',
-  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/index.js',
-  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/sw.js',
-  'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/offline/offline.html'
+  'https://staging.mustardwebsites.co.uk/themustardagency.com/wp-content/themes/mustard/images/logo.png',
+  'https://staging.mustardwebsites.co.uk/themustardagency.com/index.js',
+  'https://staging.mustardwebsites.co.uk/themustardagency.com/sw.js',
+  'https://staging.mustardwebsites.co.uk/themustardagency.com/wp-content/themes/mustard/offline/offline.html'
 ];
 
 
