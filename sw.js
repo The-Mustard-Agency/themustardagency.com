@@ -1,4 +1,4 @@
-var cacheName = 'cache-this-__VERSION__';
+var cacheName = 'cache';
 
 var requiredCacheFiles = [
   'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/images/logo.png',
@@ -7,7 +7,6 @@ var requiredCacheFiles = [
   'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/offline/offline.html'
 ];
 
-console.log('herro');
 
 self.addEventListener('fetch', function(e){
 });
