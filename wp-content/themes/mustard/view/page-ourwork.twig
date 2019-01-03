@@ -87,16 +87,14 @@ function doFilterService(whattohide){
 	getBtn.style.color = "#E10586";
 
 	for (i = 0; i < all.length; i++) {
-			if(all[i].classList.contains("all")){
-				all[i].classList.add("hidden");
-			}
-
-
+		if(all[i].classList.contains("all")){
+			all[i].classList.add("hidden");
+		}
 	}
 	for (j = 0; j < x.length; j++) {
-			if(x[j].classList.contains("hidden")){
-				x[j].classList.remove("hidden");
-			}
+		if(x[j].classList.contains("hidden")){
+			x[j].classList.remove("hidden");
+		}
 	}
 }
 
@@ -111,7 +109,7 @@ function doFilterSector(whattohide){
 	ScrollReveal().reveal('.all', { delay: 500 });
 	var allButtons = document.getElementsByClassName("filter");
 	for (k = 0; k < allButtons.length; k++) {
-				allButtons[k].style.color = "#565656";
+		allButtons[k].style.color = "#565656";
 	}
 
 	var getBtn = document.getElementsByClassName(active)[0];

@@ -191,10 +191,9 @@ article {
 			margin: -9px 0;
 			float: right;
 			background-color: $color-yellow--mid;
-		}
-
-	}
-}
+		}//button
+	}//_inner
+}//global_cta
 
 
 /* out work page */
@@ -227,8 +226,8 @@ article {
 				color: $color-pink--mid;
 			}
 		}
-	}
-}
+	}//inner
+}//filter
 
 $susy: (
 	flow: rtl,
@@ -308,17 +307,16 @@ $susy: (
 					background-color: rgba(27,62,84,0.5);
 				}
 			}
-		}
+		}//_single
 		 .hidden{
 			width: 0px;
 			height: 0px;
 			opacity: 0!important;
 			margin-right: 0px;
 			margin-bottom: 0px;
-
-		}
-	}
-}
+		}//hidden
+	}//_row
+}//work_gallery
 
 
 /*	contact page	*/
@@ -368,7 +366,7 @@ $susy: (
 						color: $color-yellow--mid;
 				}
 			}
-		}
+		}//-left
 		&-right {
 			width: 50%;
 			height: 100%;
@@ -381,9 +379,9 @@ $susy: (
 						color: $color-yellow--mid;
 				}
 			}
-		}
-	}
-}
+		}//-right
+	}//-inner
+}//contact-header
 
 #sales {
 	width: 684px;
@@ -415,7 +413,7 @@ $susy: (
 		&::before {
 		}
 	}
-}
+}//itemblock
 
 .contact-block {
 	width: 100%;
@@ -478,7 +476,7 @@ $susy: (
 	input[type="submit"] {
 		width: 250px;
 	}
-}
+}//contact-block
 
 
 /* blog page */
@@ -514,7 +512,7 @@ $susy: (
 		&:hover {
 			& .blog_img {
 				background-size: 120%;
-			}
+			}//blog_img
 			& hr {
 				width: 100%;
 				background-color: $color-pink--mid;
@@ -538,8 +536,8 @@ $susy: (
 		& hr {
 			width: 0px;
 		}
-	}
-}
+	}//_single
+}//blog-container
 
 /* mustard blocks */
 .mustard {
@@ -560,7 +558,7 @@ $susy: (
 				float: left;
 				background-position: center;
 				background-size: cover;
-			}
+			}//_left
 			&_right {
 				width: 56%;
 				height: 100%;
@@ -576,16 +574,16 @@ $susy: (
 					font-size: 20.4px;
 					line-height: 1.2;
 				}
-			}
-		}
+			}//_right
+		}//_inner
 		&:nth-child(odd) {
 			background-color: $color-white!important;
-		}
+		}//nth-child(odd)
 		&:nth-child(even) {
 			& .mustard_block_inner {
 				&_left {
 					float: right!important;
-				}
+				}//_left
 				&_right {
 					padding-left: 0px;
 					float: left!important;
@@ -598,11 +596,11 @@ $susy: (
 					& button {
 						background-color: $color-pink--mid;
 					}
-				}
-			}
-		}
-	}
-}
+				}//_right
+			}//mustard_block_inner
+		}//nth-child(even)
+	}//mustard_block
+}//mustard
 
 /* work pages */
 
@@ -635,13 +633,13 @@ $susy: (
 			font-size: 18px;
 			text-transform: capitalize;
 		}
-	}
+	}//client-deets
 	& .main-section{
 		width: 60%;
 		float: left;
 		min-height: 500px;
-	}
-}
+	}//main-section
+}//article-content
 
 .work-gallery{
 	width: 100%;
@@ -654,4 +652,4 @@ $susy: (
 		background-position: center;
 		background-repeat: no-repeat;
 	}
-}
+}//work-gallery
