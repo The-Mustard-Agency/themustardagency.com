@@ -361,7 +361,7 @@
 						transform-origin: 50% -50%;
 						background-color: $color-blue--mid;
 						opacity: 0;
-						transition: all .3s;
+						transition: all .5s ease-in-out;
 						& h3 {
 							color: $color-white;
 							text-align: center;
@@ -382,7 +382,7 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-blue--light;
-						transition: all .3s;
+						transition: all .5s ease-in-out;
 						-webkit-transform-style: preserve-3d;
 
 						&:hover {
@@ -398,7 +398,7 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-yellow--mid;
-						transition: all .3s;
+						transition: all .5s ease-in-out;
 						-webkit-transform-style: preserve-3d;
 
 						&:hover {
@@ -414,7 +414,7 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-pink--mid;
-						transition: all .3s;
+						transition: all .5s ease-in-out;
 						-webkit-transform-style: preserve-3d;
 
 						&:hover {
@@ -430,7 +430,7 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-grey--mid;
-						transition: all .3s;
+						transition: all .5s ease-in-out;
 						-webkit-transform-style: preserve-3d;
 
 						&:hover {
@@ -446,7 +446,7 @@
 						transform: rotateX(0deg);
 						opacity: 1;
 						background-color: $color-blue--mid;
-						transition: all .3s;
+						transition: all .5s ease-in-out;
 						-webkit-transform-style: preserve-3d;
 
 						&:hover {
@@ -481,7 +481,7 @@
 			}
 		}
 		&_flip {
-			transition: transform .3s ease-in-out;
+			transition: transform .5s ease-in-out;
 			&:hover {
 				&::after {
 					width: 100%;
