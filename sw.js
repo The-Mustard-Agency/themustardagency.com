@@ -7,6 +7,8 @@ var requiredCacheFiles = [
   'https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/offline/offline.html'
 ];
 
+console.log('herro');
+
 self.addEventListener('fetch', function(e){
 });
 
