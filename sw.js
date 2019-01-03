@@ -40,7 +40,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
       fetch(event.request).catch(function(error) {
         console.log('Fetch failed; returning offline page instead.', error);
-        return caches.match('https://staging.mustardwebsites.co.uk/themustardagency.co.uk/wp-content/themes/mustard/offline/offline.html');
+        return caches.match('https://staging.mustardwebsites.co.uk/themustardagency.com/wp-content/themes/mustard/offline/offline.html');
       })
     );
   }
