@@ -399,9 +399,10 @@ $susy: (
 	margin-bottom: 20px;
 	padding: 20px;
 	padding-bottom: 15px;
-	border: 2px $color-blue--mid solid;
+	border: 0px $color-blue--mid solid;
 	border-radius: 7px;
-	background-color: $color-white;
+	background-color: #fff;
+	box-shadow: rgba(0,0,0,0.1) 0px 5px 10px;
 	& h2 {
 		margin-bottom: 20px;
 	}
@@ -421,9 +422,10 @@ $susy: (
 	margin-bottom: 31px;
 	padding: 20px;
 	padding-bottom: 15px;
-	border: 2px $color-blue--mid solid;
+	border: 0px $color-blue--mid solid;
 	border-radius: 7px;
-	background-color: $color-white;
+	background-color: #fff;
+	box-shadow: rgba(0,0,0,0.1) 0px 5px 10px;
 	& p {
 		margin-bottom: 5px;
 		font-size: 20px;
