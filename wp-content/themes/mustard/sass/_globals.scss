@@ -342,12 +342,12 @@ $susy: (
 			height: 246px;
 			margin: 0 auto;
 			padding-top: 30px;
-			color: $color-white;
+			color: $color-blue--light;
 			font-size: 151px;
 			text-align: center;
 		}
 		h3 {
-			color: $color-white;
+			color: $color-blue--light;
 			font-size: 45px;
 			text-align: center;
 		}
@@ -409,7 +409,7 @@ $susy: (
 	& p {
 		margin-bottom: 5px;
 		font-size: 20px;
-		font-weight: 600;
+		font-weight: 300;
 		text-align: left;
 		&::before {
 		}
@@ -429,7 +429,7 @@ $susy: (
 	& p {
 		margin-bottom: 5px;
 		font-size: 20px;
-		font-weight: 600;
+		font-weight: 300;
 		text-align: left;
 		&::before {
 		}
