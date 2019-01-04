@@ -8,16 +8,7 @@
         <section class="article-content">
 
 					{% if post.school_name %}
-					<div class="client-deets">
-						<div class="logo" data-bg="{{ post.get_field('school_logo') }}">
-						</div>
-						<h2>{{ post.school_name }}</h2>
-						<p>{% for terms in post.terms %}{{ terms }}, {% endfor %}</p>
-						<div style="width: 100%;">
-							<div style="text-align:center;">
-								<button class="yellow-button hvr-bounce-to-top">Visit website</button>
-							</div>
-						</div>
+					<div class="client-deets" data-bg="{{ post.get_field('school_logo') }}">
 					</div>
 					{% endif %}
 
@@ -25,6 +16,9 @@
 						<h1 class="article-h1">{{ post.title }}</h1>
 	          <div class="article-body">
 	            {{post.content}}
+							{% if post.get_field('school_website') %}
+								<button onclick="window.open('{{ post.get_field('school_website') }}')" class="yellow-button hvr-bounce-to-top">Visit website</button>
+							{% endif %}
 	          </div>
 					</div>
 
