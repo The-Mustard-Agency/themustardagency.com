@@ -211,15 +211,7 @@ hr{
 		&_top {
 			& p{
 				font-size: 30px;
-				&::after{
-					content:"|";
-					margin-left: 15px;
-				}
-			}
-			& p:last-child{
-				&::after{
-					content:"";
-				}
+				color: $color-blue--dark;
 			}
 		}
 		@include media('xxsmall') {
@@ -244,11 +236,20 @@ hr{
 			text-align: center;
 			text-transform: capitalize;
 			transition: color .3s;
+			&::after{
+				content:"|";
+				margin-left: 15px;
+			}
 			&:hover {
 				color: $color-pink--mid;
 			}
 			&:active {
 				color: $color-pink--mid;
+			}
+		}
+		& p:last-child{
+			&::after{
+				content:"";
 			}
 		}
 	}//inner
