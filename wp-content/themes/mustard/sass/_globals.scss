@@ -641,13 +641,13 @@ $susy: (
 
 .article-content{
 	padding: 10px;
-	padding-top: 40px;
+	padding-top: 0px;
 	& .client-deets{
 		background-color: $color-white;
 		width: 35%;
 		margin-right: 5%;
 		float: left;
-		height: 300px;
+		height: 500px;
 		background-repeat: no-repeat;
 		background-size: cover;
 		& .logo{
@@ -675,6 +675,7 @@ $susy: (
 	& .main-section{
 		width: 60%;
 		float: left;
+		padding-top: 60px;
 		min-height: 500px;
 	}//main-section
 }//article-content
