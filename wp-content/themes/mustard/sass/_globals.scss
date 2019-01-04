@@ -197,11 +197,31 @@ article {
 
 
 /* out work page */
-
+hr{
+	background-color: $color-yellow--mid!important;
+	width: 740px!important;
+	margin: 10px auto!important;
+	margin-bottom: 20px;
+}
 .filter {
 	width: 100%;
 	height: auto;
+	display: flex;
 	&_inner {
+		&_top {
+			& p{
+				font-size: 30px;
+				&::after{
+					content:"|";
+					margin-left: 15px;
+				}
+			}
+			& p:last-child{
+				&::after{
+					content:"";
+				}
+			}
+		}
 		@include media('xxsmall') {
 			width: 100%;
 		}
@@ -211,11 +231,16 @@ article {
 		@include media('xlarge') {
 			width: $site-width;
 		}
+		display: table;
+		text-align: center;
 		margin: 0 auto;
 		& p{
+			display: inline-block;
+			justify-content: center;
 			width: auto;
 			margin-right: 20px;
-			float: left;
+			margin-bottom: 20px;
+			float: none;
 			text-align: center;
 			text-transform: capitalize;
 			transition: color .3s;
@@ -384,12 +409,12 @@ $susy: (
 }//contact-header
 
 #sales {
-	width: 684px;
+	width: 847px;
 	margin: 0 auto;
 }
 
 #support {
-	width: 684px;
+	width: 847px;
 	margin: 0 auto;
 }
 
@@ -483,6 +508,7 @@ $susy: (
 		min-width: 237px;
 		height: 52px;
 		margin-top: 20px;
+		font-size: 27px;
 	}
 }//contact-block
 

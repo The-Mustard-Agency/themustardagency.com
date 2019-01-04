@@ -14,8 +14,24 @@
 					{% endfor %}
 
 					<div class="filter">
+						<div class="filter_inner filter_inner_top">
+							{% set newArray = [] %}
+							{% for prefilter in work %}
+								{% for afilter in prefilter.terms %}
+									{% if afilter.taxonomy == "services" %}
+										{% if afilter.name not in newArray %}
+											<p class="filter {{ afilter.name }}_button" onclick='doFilterService("{{ afilter.name }}");'>{{ afilter.name }}</p>
+											{% set newArray = newArray|merge([afilter.name]) %}
+										{% endif %}
+									{% endif %}
+								{% endfor %}
+							{% endfor %}
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<hr class="filterhr"/>
+					<div class="filter">
 						<div class="filter_inner">
-							<p>Filter by sector: </p>
 							<p  class="filter all_button" onclick='doFilterSector("all");'>View all</p>
 							{% set newArray = [] %}
 							{% for prefilter in work %}
@@ -30,25 +46,6 @@
 							{% endfor %}
 						</div>
 					</div>
-					<div class="clearfix"></div>
-					<div class="filter">
-						<div class="filter_inner">
-							<p>Filter by service: </p>
-							<p  class="filter all_button" onclick='doFilterService("all");'>View all</p>
-							{% set newArray = [] %}
-							{% for prefilter in work %}
-								{% for afilter in prefilter.terms %}
-									{% if afilter.taxonomy == "services" %}
-										{% if afilter.name not in newArray %}
-											<p class="filter {{ afilter.name }}_button" onclick='doFilterService("{{ afilter.name }}");'>{{ afilter.name }}</p>
-											{% set newArray = newArray|merge([afilter.name]) %}
-										{% endif %}
-									{% endif %}
-								{% endfor %}
-							{% endfor %}
-						</div>
-					</div>
-
 					<div class="clearfix"></div>
 					<div class="work_gallery">
 						<div class="work_gallery_row">
@@ -66,7 +63,8 @@
 
 <script>
 ScrollReveal().reveal('.all');
-ScrollReveal().reveal('.filter', { delay: 2000 });
+ScrollReveal().reveal('.filter', { delay: 1000 });
+ScrollReveal().reveal('.filterhr', { delay: 1000 });
 
 //adding filters:
 function doFilterService(whattohide){
