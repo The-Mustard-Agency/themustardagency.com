@@ -152,8 +152,14 @@
 	padding-top: 159px;
 	background-color: $color-white;
 	background-image: url(images/iPad-Black.png), url(images/iPad-White.png), url(images/iPhone-angle.png);
-	background-position: -6% 2%, 17% 100px, 111% 142%;
-	background-size: 28%, 24%, 40%;
+	background-position: -29% 2%, -9% 60px, 129% 312%;
+	background-size: 24%, 20%, 35%;
+	transition: all 0.5s ease-in-out;
+	transition-delay: 0.1s;
+	&:hover{
+		background-position: -9% 2%, 11% 40px, 111% 142%;
+		background-size: 28%, 24%, 40%;
+	}
 	background-repeat: no-repeat;
 	.cta_one_inner {
 		-ms-flex-pack: center;
