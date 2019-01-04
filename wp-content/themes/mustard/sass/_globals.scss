@@ -647,9 +647,11 @@ $susy: (
 		width: 35%;
 		margin-right: 5%;
 		float: left;
-		height: 460px;
+		min-height: 500px;
+		height: 100%;
 		background-repeat: no-repeat;
 		background-size: cover;
+		margin-top: -40px;
 		& .logo{
 			width: 100%;
 			height: 73px;
