@@ -228,6 +228,7 @@ hr{
 		text-align: center;
 		margin: 0 auto;
 		& p{
+			cursor: pointer;
 			display: inline-block;
 			justify-content: center;
 			width: auto;
@@ -243,6 +244,9 @@ hr{
 			}
 			&:hover {
 				color: $color-pink--mid;
+				&::after{
+					color: $color-blue--dark;
+				}
 			}
 			&:active {
 				color: $color-pink--mid;
