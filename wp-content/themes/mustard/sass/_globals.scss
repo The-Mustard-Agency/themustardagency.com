@@ -342,12 +342,12 @@ $susy: (
 			height: 246px;
 			margin: 0 auto;
 			padding-top: 30px;
-			color: $color-blue--light;
+			color: $color-yellow--mid;
 			font-size: 151px;
 			text-align: center;
 		}
 		h3 {
-			color: $color-blue--light;
+			color: $color-yellow--mid;
 			font-size: 45px;
 			text-align: center;
 		}
@@ -360,10 +360,10 @@ $susy: (
 			float: left;
 			&:hover {
 				& i {
-						color: $color-yellow--mid;
+						color: $color-pink--mid;
 				}
 				& h3 {
-						color: $color-yellow--mid;
+						color: $color-pink--mid;
 				}
 			}
 		}//-left
