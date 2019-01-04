@@ -478,6 +478,11 @@ $susy: (
 	input[type="submit"] {
 		width: 250px!important; //overwrites 100% from the input css.
 		background-color: $color-blue--light;
+		color: $color-white;
+		text-transform: uppercase;
+		min-width: 237px;
+		height: 52px;
+		margin-top: 20px;
 	}
 }//contact-block
 
