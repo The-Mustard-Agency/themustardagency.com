@@ -33,6 +33,10 @@
 	}
 	& .quicklink_single{
 		float: left;
+		background-image: url(images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 65%;
 		cursor: pointer;
 		@include media('xxsmall'){
 			width: 33.3%!important;

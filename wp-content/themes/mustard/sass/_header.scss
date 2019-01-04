@@ -147,17 +147,17 @@
 			letter-spacing: 0.3px;
 			text-transform: uppercase;
 			& a{
-				color: $color-blue--light;
+				color: $color-yellow--mid;
 				font-size: 17px;
 				&:hover{
-					color: $color-yellow--mid;
+					color: $color-blue--light;
 				}
 			}
 		}
 		.soc {
 			width: 33px;
 			height: 33px;
-			margin-left: 16px;
+			margin-left: 9px;
 			float: left;
 			border-radius: 50%;
 			cursor: pointer;
@@ -398,7 +398,7 @@
 			align-items: center;
 			justify-content: center;
 			padding-top: 13px;
-			color: $color-yellow--mid;
+			color: $color-white;
 			font-family: 'FontAwesome';
 			font-size: 20px;
 			content: "\f095";
@@ -406,7 +406,7 @@
 		}
 		&:hover{
 			&::before {
-				color: $color-white;
+				color: $color-yellow--mid;
 			}
 		}
 	}
@@ -418,7 +418,7 @@
 			align-items: center;
 			justify-content: center;
 			padding-top: 13px;
-			color: $color-yellow--mid;
+			color: $color-white;
 			font-family: 'FontAwesome';
 			font-size: 20px;
 			content: "\f0e0";
@@ -426,7 +426,7 @@
 		}
 		&:hover {
 			&::before {
-				color: $color-white;
+				color: $color-yellow--mid;
 			}
 		}
 	}
