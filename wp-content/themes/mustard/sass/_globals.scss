@@ -207,6 +207,7 @@ hr{
 	width: 100%;
 	height: auto;
 	display: flex;
+	margin-top: 14px;
 	&_inner {
 		&_top {
 			& p{
@@ -660,19 +661,19 @@ $susy: (
 			background-size: contain;
 			margin-top: 30px;
 			margin-bottom: 30px;
-		}
+		}// logo
 		& h2{
 			text-align: center;
 			color: $color-blue--dark;
 			font-size: 30px;
 			margin-bottom: 30px;
-		}
+		}// h2
 		& p{
 			text-align: center;
 			color: $color-blue--mid;
 			font-size: 18px;
 			text-transform: capitalize;
-		}
+		}// p
 	}//client-deets
 	& .main-section{
 		width: 60%;
