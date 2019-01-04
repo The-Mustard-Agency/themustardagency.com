@@ -360,10 +360,10 @@ $susy: (
 			float: left;
 			&:hover {
 				& i {
-						color: $color-pink--mid;
+						color: $color-blue--dark;
 				}
 				& h3 {
-						color: $color-pink--mid;
+						color: $color-blue--dark;
 				}
 			}
 		}//-left
@@ -373,10 +373,10 @@ $susy: (
 			float: left;
 			&:hover {
 				& i {
-						color: $color-yellow--mid;
+						color: $color-blue--dark;
 				}
 				& h3 {
-						color: $color-yellow--mid;
+						color: $color-blue--dark;
 				}
 			}
 		}//-right
@@ -466,17 +466,18 @@ $susy: (
 		padding: 10px;
 		border-width: 0px;
 		border-radius: 7px;
-		background-color: $color-grey--light;
+		background-color: $color-white;
 	}
 	textarea {
 		width: 100%!important;
 		padding: 10px;
 		border-width: 0px;
 		border-radius: 7px;
-		background-color: $color-grey--light;
+		background-color: $color-white;
 	}
 	input[type="submit"] {
-		width: 250px;
+		width: 250px!important; //overwrites 100% from the input css.
+		background-color: $color-blue--light;
 	}
 }//contact-block
 
