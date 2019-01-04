@@ -147,6 +147,8 @@
 			letter-spacing: 0.3px;
 			text-transform: uppercase;
 			& a{
+				font-family: 'Bariol Regular', sans-serif;
+				font-weight: 500;
 				color: $color-yellow--mid;
 				font-size: 17px;
 				&:hover{
