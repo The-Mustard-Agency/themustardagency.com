@@ -641,7 +641,7 @@ $susy: (
 
 .article-content{
 	padding: 10px;
-	padding-top: 0px;
+	padding-top: 40px;
 	& .client-deets{
 		background-color: $color-white;
 		width: 35%;
@@ -675,7 +675,6 @@ $susy: (
 	& .main-section{
 		width: 60%;
 		float: left;
-		padding-top: 60px;
 		min-height: 500px;
 	}//main-section
 }//article-content
