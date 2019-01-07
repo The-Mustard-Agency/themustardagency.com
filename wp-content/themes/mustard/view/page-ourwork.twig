@@ -32,7 +32,7 @@
 					<hr class="filterhr"/>
 					<div class="filter">
 						<div class="filter_inner">
-							<p  class="filter all_button" onclick='doFilterSector("all");'>All</p>
+							<p class="filter all_button" onclick='doFilterSector("all");'>All</p>
 							{% set newArray = [] %}
 							{% for prefilter in work %}
 								{% for afilter in prefilter.terms %}
@@ -51,7 +51,7 @@
 					<div class="work_gallery">
 						<div class="work_gallery_row">
 							{% for job in work %}
-							<div alt="{{ job.title }}" onclick=" window.location = '{{ job.link }}';" class="work_gallery_row_single all {% for thing in job.terms %}{{ thing.name }}{% endfor %}"  style="background-image:url({{ job.thumbnail.src }})" data-title="{{ job.title }}"></div>
+							<div alt="{{ job.title }}" onclick=" window.location = '{{ job.link }}';" class="work_gallery_row_single all {% for thing in job.terms %}{{ thing.name }} {% endfor %}"  style="background-image:url({{ job.thumbnail.src }})" data-title="{{ job.title }}"></div>
 							{% endfor %}
 						</div>
 					</div>
