@@ -554,9 +554,9 @@ $susy: (
 				background-size: 120%;
 			}//blog_img
 			& hr {
-				width: 100%;
-				background-color: $color-pink--mid;
-				transition: width .3s ease-in-out;
+				width: 100%!important;
+				background-color: $color-pink--mid!important;
+				transition: width .3s ease-in-out!important;
 			}
 		}
 		& .blog_img {
@@ -574,7 +574,7 @@ $susy: (
 			font-weight: 300;
 		}
 		& hr {
-			width: 0px;
+			width: 0px!important;
 		}
 	}//_single
 }//blog-container
