@@ -1,9 +1,8 @@
 <div class="quicklinks_inner">
 	{% for item in options.quicklinks %}
-		<div class="quicklink_single" style="width:{{ options.number_of_quicklinks }}">
+		<div class="quicklink_single" style="width:{{ options.number_of_quicklinks }}" data-bg="{{ TimberImage(item.quicklink_icon).src }}">
 			<div class="quicklink_item" data-bg="{{ TimberImage(item.quicklink_image).src }}"></div>
 			<div class="quicklink_title">
-				<h2><i class="la la-rocket"></i></h2>
 				<a href="{{ item.quicklink_uri }}">{{ item.quiclink_title }}</a>
 			</div>
 		</div>
