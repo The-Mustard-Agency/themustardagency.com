@@ -34,9 +34,6 @@
 	& .quicklink_single{
 		float: left;
 		//background-image: url(images/logo.png);
-    background-position: 50% 31%;
-    background-repeat: no-repeat;
-    background-size: 65%;
 		cursor: pointer;
 		@include media('xxsmall'){
 			width: 33.3%!important;
@@ -77,6 +74,12 @@
 		& .quicklink_title{
 			width: 100%;
 			transition: height .3s;
+			background-position: 50% 31%;
+	    background-repeat: no-repeat;
+	    background-size: 0%;
+			&:hover{
+				background-size: 65%;
+			}
 			@include media('xxsmall'){
 				height: 67.19px;
 			}
