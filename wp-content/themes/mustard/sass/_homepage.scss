@@ -328,12 +328,23 @@
 }
 
 /* Tiles */
-
 .tiles {
 	display: block;
 	width: 100%;
 	height: auto;
 	overflow: auto;
+	@include media('xxsmall') {
+		display: none;
+	}
+	@include media('xsmall') {
+		display: none;
+	}
+	@include media('medium') {
+		display: block;
+	}
+	@include media('xxlarge') {
+		display: block;
+	}
 	&_inner {
 		height: 100%;
 		&_row {

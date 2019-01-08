@@ -17,10 +17,10 @@
 	margin: 0 auto;
 	background-color: $color-blue--mid;
 	@include media('xxsmall'){
-		height: calc( 240px * 2 );
+		height: calc( 240px * 5 );
 	}
 	@include media('xsmall'){
-		height: calc( 240px * 2 );
+		height: calc( 240px * 5 );
 	}
 	@include media('medium'){
 		height: 320px;
@@ -36,11 +36,11 @@
 		//background-image: url(images/logo.png);
 		cursor: pointer;
 		@include media('xxsmall'){
-			width: 33.3%!important;
+			width: 100%!important;
 			height: 240px;
 		}
 		@include media('xsmall'){
-			width: 33.3%!important;
+			width: 100%!important;
 			height: 240px;
 		}
 		@include media('medium'){
