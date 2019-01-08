@@ -221,12 +221,15 @@
 	background-repeat: no-repeat;
 	@include media('xxsmall') {
 		height: 364px;
+		padding-top: 50px;
 	}
 	@include media('medium') {
 		height: 579px;
+		padding-top: 250px;
 	}
 	@include media('xxlarge') {
 		height: 579px;
+		padding-top: 250px;
 	}
 	.cta_two_inner {
 		-ms-flex-pack: center;
