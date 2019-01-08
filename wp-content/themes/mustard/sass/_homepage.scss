@@ -161,6 +161,22 @@
 		background-size: 28%, 24%, 40%;
 	}
 	background-repeat: no-repeat;
+	@include media('xxsmall') {
+		height: 364px;
+		background-position: 40% 102%, 61% 230px, 59% 12%;
+    background-size: 34%, 30%, 55%;
+	}
+	@include media('xsmall') {
+		height: 364px;
+		background-position: 40% 102%, 61% 230px, 59% 12%;
+    background-size: 34%, 30%, 55%;
+	}
+	@include media('medium') {
+		height: 554px;
+	}
+	@include media('xxlarge') {
+		height: 554px;
+	}
 	.cta_one_inner {
 		-ms-flex-pack: center;
 		-ms-flex-align: center;
@@ -172,6 +188,15 @@
 		height: 100px;
 		margin: 0 auto;
 		overflow:visible;
+		@include media('xxsmall') {
+			width: 100%;
+		}
+		@include media('xsmall') {
+			width: 100%;
+		}
+		@include media('medium') {
+			width: 661px;
+		}
 		& h2 {
 			color: $color-grey--mid;
 			font-family: 'Bariol Regular', sans-serif;
