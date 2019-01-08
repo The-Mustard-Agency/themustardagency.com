@@ -173,6 +173,8 @@
 	}
 	@include media('medium') {
 		height: 554px;
+		background-position: -29% 2%, -9% 60px, 129% 312%;
+		background-size: 24%, 20%, 35%;
 	}
 	@include media('xxlarge') {
 		height: 554px;
@@ -217,6 +219,15 @@
 	background-image: url(images/cta2-left.png);
 	background-position: 0% 100%;
 	background-repeat: no-repeat;
+	@include media('xxsmall') {
+		height: 364px;
+	}
+	@include media('medium') {
+		height: 579px;
+	}
+	@include media('xxlarge') {
+		height: 579px;
+	}
 	.cta_two_inner {
 		-ms-flex-pack: center;
 		-ms-flex-align: center;
@@ -228,6 +239,15 @@
 		height: 100px;
 		float: right;
 		overflow:visible;
+		@include media('xxsmall') {
+			width: 100%;
+		}
+		@include media('xsmall') {
+			width: 100%;
+		}
+		@include media('medium') {
+			width: 661px;
+		}
 		& h2 {
 			color: $color-grey--mid;
 			font-family: 'Bariol Regular', sans-serif;
@@ -268,7 +288,8 @@
 			float: left;
 			@include media('xxsmall') {
 				width: 100%;
-				padding-left: 0px;
+				padding-left: 15px;
+				padding-right: 15px;
 			}
 			@include media('xsmall') {
 				width: 100%;
@@ -601,7 +622,7 @@
 				justify-content: center;
 				font-size: 143px;
 				@include media('xxsmall') {
-					font-size: 113px;
+					font-size: 77px;
 				}
 				@include media('xsmall') {
 					font-size: 113px;
@@ -617,7 +638,7 @@
 				width: 100%;
 				height: 60%;
 				margin-bottom: 12px;
-				padding-top: 53px;
+				padding-top: 0px;
 				padding-right: 20px;
 				padding-left: 20px;
 			}
@@ -625,7 +646,7 @@
 				width: 100%;
 				height: 60%;
 				margin-bottom: 12px;
-				padding-top: 53px;
+				padding-top: 0px;
 				padding-right: 20px;
 				padding-left: 20px;
 			}
