@@ -1,6 +1,10 @@
 body.login {
-background: #193F4A url(images/Mustard-Maintenance-Plugin-bg2.jpg) no-repeat center center fixed;
--webkit-background-size: cover;
+	background: #e0a812;
+	background: -moz-linear-gradient(-45deg, #e0a812 8%, #e10586 50%, #1b3e54 91%);
+	background: -webkit-linear-gradient(-45deg, #e0a812 8%,#e10586 50%,#1b3e54 91%);
+	background: linear-gradient(135deg, #e0a812 8%,#e10586 50%,#1b3e54 91%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0a812', endColorstr='#1b3e54',GradientType=1 );
+	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
