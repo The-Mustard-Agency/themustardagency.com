@@ -12,7 +12,7 @@ function my_login_logo() {
 	?>
 	<style type="text/css">
 		body.login div#login h1 a {
-			background-image: url(<?php get_template_directory_uri(); ?>/images/logo.png);
+			background-image: url(<?php echo get_template_directory_uri(); ?>/images/logo.png);
 			background-size:166px 44px !important;padding-bottom: 30px;width:166px !important;height:44px !important;margin:0px auto;
 		}
 	</style>
