@@ -1,0 +1,15 @@
+body.login {
+background: #193F4A url(images/Mustard-Maintenance-Plugin-bg2.jpg) no-repeat center center fixed; 
+-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.login form { 
+background: #6BA7AA;
+border-radius:10px;
+}
+.login label { 
+color: #FFFFFF;
+
+}
