@@ -6,10 +6,25 @@ background: #193F4A url(images/Mustard-Maintenance-Plugin-bg2.jpg) no-repeat cen
   background-size: cover;
 }
 .login form {
-background: rgba(255,255,255,0.5);
+background: rgba(255,255,255,0.2);
 border-radius:10px;
 }
 .login label {
 color: #FFFFFF;
 
+}
+
+.wp-core-ui .button-primary{
+	background: #dcac00;
+	border-color: #ddb000 #ddb000 #ddb000;
+	box-shadow: 0 1px 0 #ddb000;
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 0 -1px 1px #ddb000, 1px 0 1px #ddb000, 0 1px 1px #ddb000, -1px 0 1px #ddb000;
+}
+
+.login #backtoblog a, .login #nav a {
+    text-decoration: none;
+    color: #ddb000;
+    text-align: center;
 }
