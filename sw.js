@@ -1,10 +1,10 @@
 var cacheName = 'cache';
 
 var requiredCacheFiles = [
-  'https://staging.mustardwebsites.co.uk/themustardagency.com/wp-content/themes/mustard/images/logo.png',
-  'https://staging.mustardwebsites.co.uk/themustardagency.com/index.js',
-  'https://staging.mustardwebsites.co.uk/themustardagency.com/sw.js',
-  'https://staging.mustardwebsites.co.uk/themustardagency.com/wp-content/themes/mustard/offline/offline.html'
+  'https://www.themustardagency.com/wp-content/themes/mustard/images/logo.png',
+  'https://www.themustardagency.com/index.js',
+  'https://www.themustardagency.com/sw.js',
+  'https://www.themustardagency.com/wp-content/themes/mustard/offline/offline.html'
 ];
 
 
@@ -40,7 +40,7 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
       fetch(event.request).catch(function(error) {
         console.log('Fetch failed; returning offline page instead.', error);
-        return caches.match('https://staging.mustardwebsites.co.uk/themustardagency.com/wp-content/themes/mustard/offline/offline.html');
+        return caches.match('https://www.themustardagency.com/wp-content/themes/mustard/offline/offline.html');
       })
     );
   }
