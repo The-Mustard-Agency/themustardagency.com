@@ -716,11 +716,14 @@
 	&-inner{
 		width: $site-width;
 		margin: 0 auto;
+		padding-top: 30px;
+		padding-bottom: 30px;
 		& h1{
 			color: $color-white;
 			text-align: center;
 		}
 		& p{
+			font-size: 26px;
 			color: $color-white;
 			text-align: center;
 		}
