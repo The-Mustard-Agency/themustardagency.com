@@ -710,17 +710,19 @@
 
 .welcome-block{
 	width: 100%;
-	height: 350px;
+	height: 286px;
 	background-color: $color-blue--light;
 	display: block;
 	&-inner{
 		width: $site-width;
 		margin: 0 auto;
-		padding-top: 30px;
+		padding-top: 50px;
 		padding-bottom: 30px;
 		& h1{
-			color: $color-white;
+			font-size: 36px;
+			color: $color-yellow--mid;
 			text-align: center;
+			text-transform: uppercase;
 		}
 		& p{
 			font-size: 26px;
