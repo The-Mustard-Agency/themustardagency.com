@@ -5,7 +5,10 @@
 			<p>{{ post.get_field('ib2_text') }}</p>
 			<button class="yellow-button hvr-bounce-to-top" onclick="window.location='{{ post.get_field('ib2_button_link') }}';">{{ post.get_field('ib2_button_text') }}</button>
 		</div>
-		<div class="findoutmore_inner_right" data-bg="{{ post.get_field('ib2_photo_image')}}">
+		<div class="findoutmore_inner_right" data-bg="{{ post.get_field('ib2_photo_image') }}">
 		</div>
 	</div>
+	<pre>
+		{{ dump(post) }}
+	</pre>
 </div>
