@@ -5,7 +5,7 @@
 	<div class="cta_one_inner">
 		<button class="hvr-bounce-to-top" onclick="window.location='{{ post.get_field('cta_1_button_link') }}';">{{ post.get_field('cta_1_button_text') }}</button>
 		<pre>
-			{{ dump(post.get_field('cta_1_button_text')) }}
+			{{ dump(post.get_field()) }}
 		</pre>
 	</div>
 </div>
