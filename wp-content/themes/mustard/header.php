@@ -3,9 +3,9 @@
  * Ketchup theme.
  * Version 1.4
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Ketchup
- * @since Ketchup 1.4
+ * @since      Ketchup 1.4
  *
  *   /$$$$$$  /$$$$$$$$ /$$$$$$  /$$$$$$$  /$$
  *  /$$__  $$|__  $$__//$$__  $$| $$__  $$| $$

@@ -3,9 +3,9 @@
  * Ketchup theme.
  * Version 1.4
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Ketchup
- * @since Ketchup 1.4
+ * @since      Ketchup 1.4
  *
  *   /$$$$$$  /$$$$$$$$ /$$$$$$  /$$$$$$$  /$$
  *  /$$__  $$|__  $$__//$$__  $$| $$__  $$| $$
@@ -21,12 +21,16 @@
 
 // Check if timber is running.
 if ( ! class_exists( 'Timber' ) ) {
-	add_action( 'admin_notices', function() {
-		echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
-	});
-	add_filter( 'template_include', function( $template ) {
-		return get_stylesheet_directory() . '/static/no-timber.html';
-	});
+	add_action(
+		'admin_notices', function () {
+			echo '<div class="error"><p>Timber not activated. Make sure you activate the plugin in <a href="' . esc_url( admin_url( 'plugins.php#timber' ) ) . '">' . esc_url( admin_url( 'plugins.php' ) ) . '</a></p></div>';
+		}
+	);
+	add_filter(
+		'template_include', function ( $template ) {
+			return get_stylesheet_directory() . '/static/no-timber.html';
+		}
+	);
 
 	return;
 }
@@ -35,18 +39,20 @@ if ( ! class_exists( 'Timber' ) ) {
 Timber::$dirname = array( 'templates', 'view' );
 
 // Start Timber.
-require_once( __DIR__ . '/include/class-startersite.php' );
+require_once __DIR__ . '/include/class-startersite.php';
 
-/** Register the files here:.*/
+/**
+ * Register the files here:.
+ */
 function theme_register_scripts() {
-	wp_enqueue_style( 'st-georges-css', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', 'all' );
+	 wp_enqueue_style( 'st-georges-css', get_stylesheet_directory_uri() . '/style.css', array(), '1.0.0', 'all' );
 	wp_enqueue_script( 'st-georges-js', esc_url( trailingslashit( get_template_directory_uri() ) . 'js/mustard.min.js' ), array( 'jquery' ), '1.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_register_scripts', 1 );
 
 /* Add menu support */
 if ( function_exists( 'add_theme_support' ) ) {
-		add_theme_support( 'menus' );
+	add_theme_support( 'menus' );
 }
 
 /* Add post image support */
@@ -54,66 +60,70 @@ add_theme_support( 'post-thumbnails' );
 
 register_sidebar(
 	array(
-		'name' => 'page sidebar',
-		'id' => 'page_sidebar',
+		'name'          => 'page sidebar',
+		'id'            => 'page_sidebar',
 		'before_widget' => '<div id="sidebar_inner">',
-		'after_widget' => '</div>',
-		'before_title' => '<div class="side-title"><h2>',
-		'after_title' => '</h2></div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="side-title"><h2>',
+		'after_title'   => '</h2></div>',
 	)
 );
 
 // Recontextualising the menus. be sure to name names correctly here e.g. menu name should be "nav-main".
 add_filter( 'timber/context', 'add_to_context' );
 
-/** This is getting menus from wordpress.
+/**
+ * This is getting menus from WordPress.
  *
  * @since 1.2
  *
  * @param string $context Being the context of the menu, and setting it in twig.
  */
 function add_to_context( $context ) {
-	$context['menu'] = new \Timber\Menu( 'nav-main' );
+	$context['menu']       = new \Timber\Menu( 'nav-main' );
 	$context['footermenu'] = new \Timber\Menu( 'footer-menu' );
 	return $context;
 }
 
-/** Setting limits to post/news exerpts and adding trailling ...
+/**
+ * Setting limits to post/news exerpts and adding trailling ...
  *
  * @since 1.4
  *
  * @param string $limit Being the limit.
  */
 function excerpt( $limit ) {
-		$excerpt = explode( ' ', get_the_excerpt(), $limit );
+	$excerpt = explode( ' ', get_the_excerpt(), $limit );
 	if ( count( $excerpt ) >= $limit ) {
 		array_pop( $excerpt );
 		$excerpt = implode( ' ', $excerpt ) . '...';
 	} else {
 		$excerpt = implode( ' ', $excerpt );
 	}
-		$excerpt = preg_replace( '`\[[^\]]*\]`', '', $excerpt );
-		return $excerpt;
+	$excerpt = preg_replace( '`\[[^\]]*\]`', '', $excerpt );
+	return $excerpt;
 }
 
 // Timber context for the acf feeds.
 add_filter( 'timber_context', 'mytheme_timber_context' );
 
-/** Get 'options' pages for ACF. (backend acf stuff).
+/**
+ * Get 'options' pages for ACF. (backend acf stuff).
  *
  * @since 1.4
  *
  * @param string $context Being twig giving it accessable context.
  */
 function mytheme_timber_context( $context ) {
-		$context['options'] = get_fields( 'option' );
-		return $context;
+	$context['options'] = get_fields( 'option' );
+	return $context;
 }
 
 // Backend sorting for acf events (mostly redundant).
 add_filter( 'manage_school_events_posts_columns', 'set_custom_edit_mycpt_columns' );
 
-/** ACF date thing.
+/**
+ * ACF date thing.
  *
  * @since 1.4
  *
@@ -123,18 +133,19 @@ function set_custom_edit_mycpt_columns( $columns ) {
 	$date = $colunns['date'];
 	unset( $columns['date'] );
 	$columns['acf_field'] = __( 'Event Date', 'my-text-domain' );
-	$columns['date'] = $date;
+	$columns['date']      = $date;
 	return $columns;
 }
 
 // Another acf events, making the columns sortable in backend.
 add_action( 'manage_school_events_posts_custom_column', 'custom_mycpt_column', 10, 2 );
 
-/** Make events sortable in backend.
+/**
+ * Make events sortable in backend.
  *
  * @since 1.4
  *
- * @param string $column Being the backend columns.
+ * @param string $column  Being the backend columns.
  * @param string $post_id Being the post id of each event.
  */
 function custom_mycpt_column( $column, $post_id ) {
@@ -149,7 +160,8 @@ function custom_mycpt_column( $column, $post_id ) {
 // Adds the acf items to the tabel(backend again).
 add_filter( 'manage_edit-school_events_sortable_columns', 'set_custom_mycpt_sortable_columns' );
 
-/** Adds sortable columns to ACF events.
+/**
+ * Adds sortable columns to ACF events.
  *
  * @since 1.4
  *
@@ -163,39 +175,44 @@ function set_custom_mycpt_sortable_columns( $columns ) {
 // Should remove comments section in backend, only works on live server.
 add_action( 'wp_before_admin_bar_render', 'my_admin_bar_render' );
 
-/** Removes admin bar comments section:*/
+/**
+ * Removes admin bar comments section:
+ */
 function my_admin_bar_render() {
-		global $wp_admin_bar;
-		$wp_admin_bar->remove_menu( 'comments' );
-		$wp_admin_bar->remove_menu( 'wp-logo' );
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu( 'comments' );
+	$wp_admin_bar->remove_menu( 'wp-logo' );
 }
 
 // Remove howdy from backend, because.. ew.
 add_action( 'admin_bar_menu', 'wp_admin_bar_my_custom_account_menu', 11 );
-/** Removes the annoying Howdy in the backend.
+/**
+ * Removes the annoying Howdy in the backend.
  *
  * @since 1.1
  *
  * @param string $wp_admin_bar Being the wp admin bar thing.
  */
 function wp_admin_bar_my_custom_account_menu( $wp_admin_bar ) {
-	$user_id = get_current_user_id();
+	 $user_id     = get_current_user_id();
 	$current_user = wp_get_current_user();
-	$profile_url = get_edit_profile_url( $user_id );
+	$profile_url  = get_edit_profile_url( $user_id );
 
 	if ( 0 != $user_id ) {
-		/** Add the "My Account" menu. */
+		/**
+	* Add the "My Account" menu.
+*/
 		$avatar = get_avatar( $user_id, 28 );
 		/* translators: %s: search term */
 		$howdy = sprintf( __( 'Welcome, %1$s' ), $current_user->display_name );
 		$class = empty( $avatar ) ? '' : 'with-avatar';
 		$wp_admin_bar->add_menu(
 			array(
-				'id' => 'my-account',
+				'id'     => 'my-account',
 				'parent' => 'top-secondary',
-				'title' => $howdy . $avatar,
-				'href' => $profile_url,
-				'meta' => array(
+				'title'  => $howdy . $avatar,
+				'href'   => $profile_url,
+				'meta'   => array(
 					'class' => $class,
 				),
 			)
@@ -220,34 +237,34 @@ function wp_admin_bar_my_custom_account_menu( $wp_admin_bar ) {
  */
 
 // Mustard portfolio.
-require_once( __DIR__ . '/include/our-work.php' );
+require_once __DIR__ . '/include/our-work.php';
 
 // Define shortcodes.
-require_once( __DIR__ . '/include/shortcodes.php' );
+require_once __DIR__ . '/include/shortcodes.php';
 
 // Custome login.
-require_once( __DIR__ . '/include/mustard-login.php' );
+require_once __DIR__ . '/include/mustard-login.php';
 
 // ACF Starter set in admin, for acf backend pages etc.
-require_once( __DIR__ . '/include/acf.php' );
+require_once __DIR__ . '/include/acf.php';
 
 // Dynamic htaccess, for varnishing - run by doing permalink updates.
-require_once( __DIR__ . '/include/htaccess.php' );
+require_once __DIR__ . '/include/htaccess.php';
 
 // Dashboard Helper.
-require( __DIR__ . '/include/dash-helper.php' );
+require __DIR__ . '/include/dash-helper.php';
 
 // Must-use pages.
-require( __DIR__ . '/include/pre-built-pages.php' );
+require __DIR__ . '/include/pre-built-pages.php';
 
 // Jigsaw.
-require( __DIR__ . '/include/jigsaw.php' );
+require __DIR__ . '/include/jigsaw.php';
 
 // Auto menus, automaticly adds predefined menus to the theme.
-require( __DIR__ . '/include/menu.php' );
+require __DIR__ . '/include/menu.php';
 
 // Soil, for smart stuff.
-require( __DIR__ . '/include/soil.php' );
+require __DIR__ . '/include/soil.php';
 
 // Lets do this thing!!!
 new StarterSite();

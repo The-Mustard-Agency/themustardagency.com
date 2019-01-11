@@ -5,9 +5,9 @@
  * php code sniffer is throwing this error: 12 | ERROR | [x] Line indented incorrectly; expected at least 1 tabs, found 0
  * its lieing, its fine, pgpcs bug, will check in future.
  *
- * @package WordPress
+ * @package    WordPress
  * @subpackage Ketchup
- * @since Ketchup 1.2
+ * @since      Ketchup 1.2
  */
 
 if ( isset( $_SERVER['HTTP_HOST'] ) ) {

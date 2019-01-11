@@ -15,7 +15,8 @@
  * @var type $rules Description.
  */
 
-/**  This will update the htacces for better seo and varnishing when permalinks are set
+/**
+ * This will update the htacces for better seo and varnishing when permalinks are set
  *
  * @since 0.1
  *
